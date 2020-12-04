@@ -1,0 +1,40 @@
+$maxWidth: 1280
+
+@mixin adaptive-font($pcSize, $mobSize) // Адаптивный шрифт
+  $addSize: $pcSize - $mobSize
+  $maxWidth: $maxWidth - 320
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
+@mixin font($fontName, $fileName, $weight, $style)
+  @font-face
+    font-family: $fontName
+    font-display: swap
+    src: url("../fonts/#{$fileName}.woff") format("woff"), url("../fonts/#{$fileName}.woff2") format("woff2")
+    font-weight: #{$weight}
+    font-style: #{$style}
+
+.title
+  font-weight: bold
+  font-size: 10px
+  letter-spacing: 0.05em
+  text-transform: uppercase
+
+.more
+  font-weight: bold
+  font-size: 10px
+  color: inherit
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  svg
+    margin-left: 20px
+
+.button
+  background-color: $c-active
+  padding: 20px 50px
+  font-size: 10px
+  line-height: 10px
+  text-transform: uppercase
+  letter-spacing: 0.05em
+  color: #fafafa
+  text-align: center
+  font-weight: 700

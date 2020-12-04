@@ -1,0 +1,28 @@
+.proposal
+  background-color: #eeeff1
+  padding: 100px 0px
+  color: #1A1A1A
+  .container>*
+    margin-bottom: 50px
+  &-title
+    @extend .title
+  &-description
+    font-weight: 500
+    font-size: 32px
+    line-height: 42px
+    max-width: 900px
+  &-form
+    &>:not(:last-child)
+      margin-right: 50px
+    &__input
+      padding: 22px 20px
+      background-color: rgba(26, 26, 26, .1)
+      color: #1a1a1a
+      width: 300px
+      &::placeholder
+        color: #1a1a1a
+    &__submit
+      @extend .button
+      height: 60px
+      width: 250px
+      cursor: pointer

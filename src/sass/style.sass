@@ -1,0 +1,68 @@
+@import 'variables'
+@import 'mixins'
+@import 'null'
+@import 'fonts'
+
+::-webkit-scrollbar-button
+  background-image: url('')
+  background-repeat: no-repeat
+  width: 5px
+  height: 0px
+
+::-webkit-scrollbar-track
+  background-color: transparent
+
+::-webkit-scrollbar-thumb
+  -webkit-border-radius: 0px
+  border-radius: 0px
+  background-color: $c-sec
+
+::-webkit-scrollbar-thumb:hover
+  background-color: $c-active
+
+::-webkit-resizer
+  background-image: url('')
+  background-repeat: no-repeat
+  width: 5px
+  height: 0px
+
+::-webkit-scrollbar
+  width: 5px
+
+.container
+  max-width: $maxWidthContainer+px
+  margin: 0px auto
+  @media ( min-width: 1540+px )
+    max-width: 1440px
+  @media ( max-width: $md1+px )
+    max-width: 970px
+  @media ( max-width: $md2+px )
+    max-width: 750px
+  @media ( max-width: $md3+px )
+    max-width: none
+    padding: 0px 10px
+
+.main
+  height: 100vh
+  color: #ffffff
+  background-image: url('../img/main.jpg')
+  background-repeat: no-repeat
+  &-text
+    position: absolute
+    top: 50%
+    left: 120px
+    color: #fafafa
+    h1
+      font-weight: 900
+      font-size: 60px
+      margin-bottom: 30px
+    h2
+      font-weight: bold
+      font-size: 20px
+
+@import 'header'
+@import 'about'
+@import 'gallery'
+@import 'flat'
+@import 'proposal'
+@import 'footer'

@@ -1,0 +1,33 @@
+.gallery
+  padding: 100px 0
+  background-color: #eeeff1
+  color: #1a1a1a
+  &-wrapper
+    display: flex
+    flex-wrap: wrap
+  &-title
+    @extend .title
+    margin-bottom: 100px
+  &-text
+    flex-basis: calc(100% - 900px)
+    margin-right: 100px
+    margin-bottom: 100px
+    &__title
+      font-weight: 500
+      font-size: 32px
+      color: #1a1a1a
+      margin-bottom: 50px
+    &__description
+      font-size: 16px
+      line-height: 140%
+      margin-bottom: 30px
+    &__link
+      @extend .more
+  &-slider
+    flex-basis: 800px
+    img
+      object-fit: contain
+  &-nav
+    margin-top: 100px
+    a:first-child
+      margin-right: 86px

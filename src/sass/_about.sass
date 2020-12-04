@@ -1,0 +1,42 @@
+.about
+  padding: 100px 0px
+  &-title
+    @extend .title
+    margin-bottom: 50px
+  &-parent
+    display: flex
+    justify-content: space-between
+  &-wrapper
+    color: #111111
+    &:first-child
+      margin-right: 100px
+      .about-wrapper__text
+        font-weight: 500
+        font-size: 32px
+        line-height: 130%
+        margin-bottom: 50px
+    &:last-child
+      .about-wrapper__text
+        font-weight: normal
+        font-size: 16px
+        line-height: 140%
+    &__link
+      @extend .more
+  &-inner
+    margin-top: 50px
+    display: flex
+    flex-wrap: wrap
+    &__block
+      display: flex
+      flex-direction: column
+  &-block
+    flex-basis: 50%
+    margin-bottom: 50px
+    &__number
+      font-weight: 900
+      font-size: 40px
+      line-height: 100%
+      margin-bottom: 20px
+    &__description
+      font-size: 14px
+      line-height: 120%

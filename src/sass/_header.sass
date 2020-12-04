@@ -1,0 +1,27 @@
+.header
+  position: absolute
+  width: 100vw
+  margin: 0 120px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 42px
+  &-menu
+    display: inherit
+    justify-content: inherit
+    align-items: inherit
+    a
+      color: #FAFAFA
+      font-weight: 700
+    &__list
+      display: inherit
+    &__action
+      margin-left: 115px
+  &-list
+    &__link
+      font-size: 16px
+    &__item:not(:last-child)
+      margin-right: 32px
+  &-action
+    &__link
+      @extend .button
