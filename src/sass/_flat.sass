@@ -9,18 +9,18 @@
       .filled-card
         right: 0px
       img
-        right: 120px
+        right: calc((100vw - 240px) / 10)
     &:last-child
       .filled-card
         left: 0
       .flat-wrapper, .flat-title
-        margin-left: 620px
+        margin-left: 50%
   .filled-card
-    background-color: #fff
+    background-color: rgb(250, 250, 250)
     width: 320px
     position: absolute
     top: 0px
-    height: 101%
+    height: 100%
   img
     position: absolute
     top: 100px
@@ -29,8 +29,8 @@
     @extend .title
     margin-bottom: 50px
   &-wrapper
-    max-width: 600px
-    width: 600px
+    max-width: 50%
+    width: 50%
     &>*:not(:last-child)
       margin-bottom: 40px
     &__title
@@ -42,6 +42,7 @@
       font-size: 16px
       line-height: 22px
       color: #111111
+      width: 75%
     &__link
       @extend .button
       min-width: 250px

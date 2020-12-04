@@ -84,6 +84,7 @@ body {
   font-size: 100%;
   font-size: 14px;
   line-height: 1;
+  background-color: #fafafa;
 }
 
 input,
@@ -322,6 +323,8 @@ h6 {
 
 .about {
   padding: 100px 0px;
+  min-height: 100vh;
+  background-color: #FAFAFA;
 }
 
 .about-title {
@@ -343,6 +346,8 @@ h6 {
 
 .about-wrapper:first-child {
   margin-right: 100px;
+  -ms-flex-preferred-size: calc(100% / 2 - 100px);
+      flex-basis: calc(100% / 2 - 100px);
 }
 
 .about-wrapper:first-child .about-wrapper__text {
@@ -350,6 +355,11 @@ h6 {
   font-size: 32px;
   line-height: 130%;
   margin-bottom: 50px;
+}
+
+.about-wrapper:last-child {
+  -ms-flex-preferred-size: calc(100% / 2);
+      flex-basis: calc(100% / 2);
 }
 
 .about-wrapper:last-child .about-wrapper__text {
@@ -378,9 +388,13 @@ h6 {
 }
 
 .about-block {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: calc(50% - 36px);
+      flex-basis: calc(50% - 36px);
   margin-bottom: 50px;
+}
+
+.about-block:not(:nth-child(2n)) {
+  margin-right: 72px;
 }
 
 .about-block__number {
@@ -470,7 +484,7 @@ h6 {
 }
 
 .flat-block:first-child img {
-  right: 120px;
+  right: calc((100vw - 240px) / 10);
 }
 
 .flat-block:last-child .filled-card {
@@ -479,15 +493,15 @@ h6 {
 
 .flat-block:last-child .flat-wrapper,
 .flat-block:last-child .flat-title {
-  margin-left: 620px;
+  margin-left: 50%;
 }
 
 .flat .filled-card {
-  background-color: #fff;
+  background-color: #fafafa;
   width: 320px;
   position: absolute;
   top: 0px;
-  height: 101%;
+  height: 100%;
 }
 
 .flat img {
@@ -501,8 +515,8 @@ h6 {
 }
 
 .flat-wrapper {
-  max-width: 600px;
-  width: 600px;
+  max-width: 50%;
+  width: 50%;
 }
 
 .flat-wrapper > *:not(:last-child) {
@@ -520,6 +534,7 @@ h6 {
   font-size: 16px;
   line-height: 22px;
   color: #111111;
+  width: 75%;
 }
 
 .flat-wrapper__link {
