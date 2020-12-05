@@ -665,6 +665,21 @@ body.lock {
   margin-right: 86px;
 }
 
+.gallery-nav__arrow:first-child::before {
+  left: 0px;
+  width: 0px;
+  -webkit-transition: .15s all linear;
+  -o-transition: .15s all linear;
+  transition: .15s all linear;
+}
+
+.gallery-nav__arrow:first-child:hover::before {
+  width: 81px;
+  -webkit-transition: .15s all linear;
+  -o-transition: .15s all linear;
+  transition: .15s all linear;
+}
+
 .gallery-nav__arrow:last-child {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
@@ -672,25 +687,33 @@ body.lock {
   top: -2px;
 }
 
-.gallery-nav__arrow svg {
-  -webkit-transition: .35s all linear;
-  -o-transition: .35s all linear;
-  transition: .35s all linear;
+.gallery-nav__arrow:last-child::before {
+  right: 0;
+  width: 0px;
+  -webkit-transition: .15s all linear;
+  -o-transition: .15s all linear;
+  transition: .15s all linear;
 }
 
-.gallery-nav__arrow svg path {
-  fill-opacity: 1;
+.gallery-nav__arrow:last-child:hover::before {
+  width: 81px;
+  -webkit-transition: .15s all linear;
+  -o-transition: .15s all linear;
+  transition: .15s all linear;
+  right: 39px;
+}
+
+.gallery-nav__arrow svg {
+  -webkit-transition: .15s all linear;
+  -o-transition: .15s all linear;
+  transition: .15s all linear;
 }
 
 .gallery-nav__arrow:hover svg path {
-  -webkit-transition: .35s all linear;
-  -o-transition: .35s all linear;
-  transition: .35s all linear;
   fill-opacity: 1;
 }
 
 .gallery-nav__arrow::before {
-  right: -81px;
   top: 50%;
   -webkit-transform: translateY(calc(-50% - 1px));
       -ms-transform: translateY(calc(-50% - 1px));
@@ -698,25 +721,24 @@ body.lock {
   content: '';
   position: absolute;
   height: 2px;
-  width: 81px;
-  background-color: #1a1a1a;
+  background-color: #111111;
   visibility: hidden;
   display: block;
 }
 
 .gallery-nav__arrow:hover svg {
   margin-right: 81px;
-  -webkit-transition: .35s all linear;
-  -o-transition: .35s all linear;
-  transition: .35s all linear;
+  -webkit-transition: .15s all linear;
+  -o-transition: .15s all linear;
+  transition: .15s all linear;
 }
 
 .gallery-nav__arrow:hover::before {
-  -webkit-transition: .35s all linear;
-  -o-transition: .35s all linear;
-  transition: .35s all linear;
+  -webkit-transition: .15s all linear;
+  -o-transition: .15s all linear;
+  transition: .15s all linear;
   visibility: visible;
-  right: 0;
+  background-color: #1a1a1a;
 }
 
 .flat {
