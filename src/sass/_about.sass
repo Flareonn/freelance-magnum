@@ -43,6 +43,9 @@
   &-block
     flex-basis: calc(50% - 36px)
     margin-bottom: 50px
+    &:hover span
+      color: $c-active
+      transition: .5s color linear
     @media ( max-width: $md4+px )
       flex-basis: 100%
     &:not(:nth-child(2n))
@@ -54,6 +57,7 @@
       font-size: 40px
       line-height: 100%
       margin-bottom: 20px
+      transition: .5s color linear
     &__description
       font-size: 14px
       line-height: 120%

@@ -22,19 +22,10 @@
         flex-direction: column
         flex-basis: 100%
   &-logo
-    svg
-      &:first-child
-        @media ( max-width: $md3+px )
-          display: none
-      &:last-child
-        display: none
-        @media ( max-width: $md3+px )
-          display: block
+    @extend .logo
     @media ( max-width: $md3+px )
       margin-bottom: 50px
   &-list
-    @media ( max-width: $md4+px )
-      margin-bottom: 50px
     &__item
       margin-bottom: 12px
       &__link
@@ -42,6 +33,8 @@
         font-size: 14px
         line-height: 14px
         color: #FAFAFA
+    @media ( max-width: $md4+px )
+      margin-bottom: 50px
   &-action
     margin-left: 305px
     @media (max-width: $md2+px)
@@ -61,3 +54,9 @@
       font-size: 14px
       line-height: 14px
       color: #FAFAFA
+
+.footer ul li a
+  transition: .25s color linear
+  &:hover
+    color: $c-active
+    transition: .25s color linear

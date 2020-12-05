@@ -19,13 +19,36 @@ $maxWidth: 1280
   letter-spacing: 0.05em
   text-transform: uppercase
 
+.logo
+  &:hover svg
+    >rect
+      fill: $c-normal
+      transition: .25s fill linear
+    path
+      fill: $c-active
+      transition: .25s fill linear
+  svg
+    >rect, path
+      transition: .25s fill linear
+    &:first-child
+      @media ( max-width: $md3+px )
+        display: none
+    &:last-child
+      display: none
+      @media ( max-width: $md3+px )
+        display: block
+
 .more
   font-weight: bold
   font-size: 10px
   color: inherit
   letter-spacing: 0.05em
   text-transform: uppercase
+  &:hover svg
+    transition: .25s all linear
+    margin-left: 40px
   svg
+    transition: .25s all linear
     margin-left: 20px
 
 .button

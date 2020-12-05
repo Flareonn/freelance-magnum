@@ -13,7 +13,7 @@ let path = {
   src: {
     html: [
       source_folder +
-        "/{index,second,about,price,contact,repair,repair-one,repair-two,repair-three,repair-four,repair-five,repair-six,repair-seven,repair-eight,cargo,cargo-one,cargo-two,cargo-three,cargo-four,cargo-five,cargo-six,cargo-seven,adblue,adblue-one,trailer,trailer-one,trailer-two,control,control-one,control-two,control-three,repair-kond,repair-kond-one}.html",
+        "/{index,flat}.html",
       "!" + source_folder + "/_*.html",
     ],
     css: source_folder + "/sass/style.sass",

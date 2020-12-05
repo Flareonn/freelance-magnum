@@ -32,6 +32,10 @@
   &-list
     &__link
       font-size: 16px
+      transition: .25s color linear
+      &:hover
+        color: $c-active
+        transition: .25s color linear
     &__item
       &:not(:last-child)
         margin-right: 32px
@@ -39,15 +43,8 @@
         display: none
   &-action__link
     @extend .button
-  &-logo__image svg
-    &:first-child
-      @media ( max-width: $md3+px )
-        display: none
-    &:last-child
-      display: none
-      @media ( max-width: $md3+px )
-        display: block
-
+  &-logo__image
+    @extend .logo
 .header-burger
   display: none
   position: relative
