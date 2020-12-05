@@ -12,7 +12,7 @@
         <h2 class="main-subtitle">Квартиры от 18000 рублей в месяц</h2>
       </div>
     </main>
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <h2 class="about-title">о проекте</h2>
         <div class="about-parent">
@@ -117,7 +117,7 @@
               </svg>
             </a>
             <div class="gallery-nav">
-              <a href="#" class="gallery-nav__arrow">
+              <div class="gallery-nav__arrow gallery-nav__arrow-prev">
                 <svg
                   width="39"
                   height="16"
@@ -131,31 +131,44 @@
                     fill-opacity="0.3"
                   />
                 </svg>
-              </a>
-              <a href="#" class="gallery-nav__arrow">
+              </div>
+              <div class="gallery-nav__arrow gallery-nav__arrow-next">
                 <svg
-                  width="120"
+                  width="39"
                   height="16"
-                  viewBox="0 0 120 16"
+                  viewBox="0 0 39 16"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M119.707 8.70711C120.098 8.31658 120.098 7.68342 119.707 7.29289L113.343 0.928932C112.953 0.538408 112.319 0.538408 111.929 0.928932C111.538 1.31946 111.538 1.95262 111.929 2.34315L117.586 8L111.929 13.6569C111.538 14.0474 111.538 14.6805 111.929 15.0711C112.319 15.4616 112.953 15.4616 113.343 15.0711L119.707 8.70711ZM0 9H119V7H0V9Z"
+                    d="M0.292893 7.29289C-0.0976295 7.68341 -0.0976296 8.31658 0.292892 8.7071L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41422 8L8.07107 2.34314C8.46159 1.95262 8.46159 1.31945 8.07107 0.928929C7.68054 0.538405 7.04738 0.538405 6.65685 0.928929L0.292893 7.29289ZM39 7L1 7L1 9L39 9L39 7Z"
                     fill="#1A1A1A"
+                    fill-opacity="0.3"
                   />
                 </svg>
-              </a>
+              </div>
             </div>
           </div>
-          <div class="gallery-slider">
-            <!-- prettier-ignore -->
-            <img src="/img/slider/slide-1.jpg" alt="slide item" class="gallery-slider__item" />
+          <div class="gallery-slider swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <!-- prettier-ignore -->
+                <img src="/img/slider/slide-1.jpg" alt="slide item" class="gallery-slider__item" />
+              </div>
+              <div class="swiper-slide">
+                <!-- prettier-ignore -->
+                <img src="/img/slider/slide-2.jpg" alt="slide item" class="gallery-slider__item" />
+              </div>
+              <div class="swiper-slide">
+                <!-- prettier-ignore -->
+                <img src="/img/slider/slide-3.jpg" alt="slide item" class="gallery-slider__item" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="flat">
+    <section class="flat" id="flat">
       <div class="flat-block">
         <div class="container">
           <h2 class="flat-title">квартиры</h2>

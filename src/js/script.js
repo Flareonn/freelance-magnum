@@ -1,5 +1,5 @@
 function testWebP(callback) {
-  var webP = new Image();
+  let webP = new Image();
   webP.onload = webP.onerror = function () {
     callback(webP.height == 2);
   };
@@ -13,3 +13,11 @@ testWebP(function (support) {
     document.querySelector("body").classList.add("no-webp");
   }
 });
+
+let mySwiper = new Swiper('.gallery-slider', {
+  loop: true,
+  navigation: {
+    nextEl: '.gallery-nav__arrow-next',
+    prevEl: '.gallery-nav__arrow-prev',
+  }
+})

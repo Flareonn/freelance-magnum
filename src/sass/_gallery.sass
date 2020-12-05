@@ -26,8 +26,42 @@
   &-slider
     flex-basis: 800px
     img
-      object-fit: contain
+      object-fit: cover
+      height: 100%
   &-nav
     margin-top: 100px
-    a:first-child
-      margin-right: 86px
+    position: relative
+    &__arrow
+      position: relative
+      display: inline-block
+      cursor: pointer
+      &:first-child
+        margin-right: 86px
+      &:last-child
+        transform: rotate(180deg)
+      svg
+        transition: .35s all linear
+        path
+          fill-opacity: 1
+      &:hover svg path
+        transition: .35s all linear
+        fill-opacity: 1
+      &::before
+        right: -81px
+        top: 50%
+        transform: translateY(calc(-50% - 1px))
+        content: ''
+        position: absolute
+        height: 2px
+        width: 81px
+        background-color: #1a1a1a
+        visibility: hidden
+        display: block
+      &:hover
+        svg
+          margin-right: 81px
+          transition: .35s all linear
+        &::before
+          transition: .35s all linear
+          visibility: visible
+          right: 0
