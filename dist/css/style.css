@@ -2,7 +2,8 @@
 .about-title,
 .gallery-title,
 .flat-title,
-.proposal-title {
+.proposal-title,
+.popup-title {
   font-weight: bold;
   font-size: 10px;
   letter-spacing: 0.05em;
@@ -30,7 +31,8 @@
 .header-action__link,
 .flat-wrapper__link,
 .proposal-form__submit,
-.footer-action__link {
+.footer-action__link,
+.popup-form__submit {
   background-color: #FF7F5C;
   padding: 20px 50px;
   font-size: 10px;
@@ -40,6 +42,66 @@
   color: #fafafa;
   text-align: center;
   font-weight: 700;
+  -webkit-transition: .15s all linear;
+  -o-transition: .15s all linear;
+  transition: .15s all linear;
+  border: 1px solid transparent;
+}
+
+.button:hover,
+.main-text__link:hover,
+.header-action__link:hover,
+.flat-wrapper__link:hover,
+.proposal-form__submit:hover,
+.footer-action__link:hover,
+.popup-form__submit:hover {
+  background-color: #ff6b43;
+  -webkit-transition: .15s all linear;
+  -o-transition: .15s all linear;
+  transition: .15s all linear;
+}
+
+.button.active,
+.active.main-text__link,
+.active.header-action__link,
+.active.flat-wrapper__link,
+.active.proposal-form__submit,
+.active.footer-action__link,
+.active.popup-form__submit {
+  border: 1px solid #FF7F5C;
+  background-color: transparent;
+  color: #FF7F5C;
+}
+
+.input,
+.proposal-form__input,
+.popup-form__input {
+  padding: 22px 20px;
+  background-color: rgba(26, 26, 26, 0.1);
+  color: #1a1a1a;
+  width: 300px;
+}
+
+.input::-webkit-input-placeholder, .proposal-form__input::-webkit-input-placeholder, .popup-form__input::-webkit-input-placeholder {
+  color: #1a1a1a;
+}
+
+.input::-moz-placeholder, .proposal-form__input::-moz-placeholder, .popup-form__input::-moz-placeholder {
+  color: #1a1a1a;
+}
+
+.input:-ms-input-placeholder, .proposal-form__input:-ms-input-placeholder, .popup-form__input:-ms-input-placeholder {
+  color: #1a1a1a;
+}
+
+.input::-ms-input-placeholder, .proposal-form__input::-ms-input-placeholder, .popup-form__input::-ms-input-placeholder {
+  color: #1a1a1a;
+}
+
+.input::placeholder,
+.proposal-form__input::placeholder,
+.popup-form__input::placeholder {
+  color: #1a1a1a;
 }
 
 img {
@@ -135,7 +197,8 @@ h6 {
 .about-title,
 .gallery-title,
 .flat-title,
-.proposal-title {
+.proposal-title,
+.popup-title {
   font-weight: bold;
   font-size: 10px;
   letter-spacing: 0.05em;
@@ -163,7 +226,8 @@ h6 {
 .header-action__link,
 .flat-wrapper__link,
 .proposal-form__submit,
-.footer-action__link {
+.footer-action__link,
+.popup-form__submit {
   background-color: #FF7F5C;
   padding: 20px 50px;
   font-size: 10px;
@@ -173,6 +237,66 @@ h6 {
   color: #fafafa;
   text-align: center;
   font-weight: 700;
+  -webkit-transition: .15s all linear;
+  -o-transition: .15s all linear;
+  transition: .15s all linear;
+  border: 1px solid transparent;
+}
+
+.button:hover,
+.main-text__link:hover,
+.header-action__link:hover,
+.flat-wrapper__link:hover,
+.proposal-form__submit:hover,
+.footer-action__link:hover,
+.popup-form__submit:hover {
+  background-color: #ff6b43;
+  -webkit-transition: .15s all linear;
+  -o-transition: .15s all linear;
+  transition: .15s all linear;
+}
+
+.button.active,
+.active.main-text__link,
+.active.header-action__link,
+.active.flat-wrapper__link,
+.active.proposal-form__submit,
+.active.footer-action__link,
+.active.popup-form__submit {
+  border: 1px solid #FF7F5C;
+  background-color: transparent;
+  color: #FF7F5C;
+}
+
+.input,
+.proposal-form__input,
+.popup-form__input {
+  padding: 22px 20px;
+  background-color: rgba(26, 26, 26, 0.1);
+  color: #1a1a1a;
+  width: 300px;
+}
+
+.input::-webkit-input-placeholder, .proposal-form__input::-webkit-input-placeholder, .popup-form__input::-webkit-input-placeholder {
+  color: #1a1a1a;
+}
+
+.input::-moz-placeholder, .proposal-form__input::-moz-placeholder, .popup-form__input::-moz-placeholder {
+  color: #1a1a1a;
+}
+
+.input:-ms-input-placeholder, .proposal-form__input:-ms-input-placeholder, .popup-form__input:-ms-input-placeholder {
+  color: #1a1a1a;
+}
+
+.input::-ms-input-placeholder, .proposal-form__input::-ms-input-placeholder, .popup-form__input::-ms-input-placeholder {
+  color: #1a1a1a;
+}
+
+.input::placeholder,
+.proposal-form__input::placeholder,
+.popup-form__input::placeholder {
+  color: #1a1a1a;
 }
 
 @font-face {
@@ -304,6 +428,7 @@ h6 {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+  z-index: 2;
 }
 
 .header-menu {
@@ -380,6 +505,10 @@ h6 {
 
 .header-burger span {
   top: 9px;
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .about {
@@ -540,6 +669,7 @@ h6 {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+  top: -2px;
 }
 
 .gallery-nav__arrow svg {
@@ -697,35 +827,8 @@ h6 {
   margin-right: 50px;
 }
 
-.proposal-form__input {
-  padding: 22px 20px;
-  background-color: rgba(26, 26, 26, 0.1);
-  color: #1a1a1a;
-  width: 300px;
-}
-
 .proposal-form__input:first-child {
   margin-bottom: 20px;
-}
-
-.proposal-form__input::-webkit-input-placeholder {
-  color: #1a1a1a;
-}
-
-.proposal-form__input::-moz-placeholder {
-  color: #1a1a1a;
-}
-
-.proposal-form__input:-ms-input-placeholder {
-  color: #1a1a1a;
-}
-
-.proposal-form__input::-ms-input-placeholder {
-  color: #1a1a1a;
-}
-
-.proposal-form__input::placeholder {
-  color: #1a1a1a;
 }
 
 .proposal-form__submit {
@@ -803,6 +906,65 @@ h6 {
   color: #FAFAFA;
 }
 
+.popup {
+  padding-top: 280px;
+  height: 100vh;
+  position: absolute;
+  top: -150%;
+  left: 0;
+  width: 100%;
+  background-color: #E5E5E5;
+  z-index: 1;
+  -webkit-transition: .25s all linear;
+  -o-transition: .25s all linear;
+  transition: .25s all linear;
+}
+
+.popup.active {
+  display: block;
+  top: 0;
+  -webkit-transition: .25s all linear;
+  -o-transition: .25s all linear;
+  transition: .25s all linear;
+}
+
+.popup-wrapper__text {
+  font-weight: 500;
+  line-height: 42px;
+  color: #111111;
+  font-size: calc(25px + 7 * ((100vw - 320px) / 960));
+}
+
+.popup-wrapper > * {
+  margin-bottom: 50px;
+}
+
+.popup-form {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.popup-form__input {
+  margin-right: 50px;
+}
+
+.popup-form__submit {
+  height: 60px;
+  width: 250px;
+  cursor: pointer;
+}
+
+.header.active svg path {
+  fill: #000;
+}
+
+.header.active li a {
+  color: #000000;
+}
+
 @media (min-width: 768.1px) {
   .gallery > .container > .gallery-title {
     display: none;
@@ -872,6 +1034,10 @@ h6 {
   .footer-action {
     margin-left: auto;
   }
+
+  .popup-form__input {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -890,10 +1056,6 @@ h6 {
 
   .header-logo__image svg:last-child {
     display: block;
-  }
-
-  body.lock {
-    overflow: hidden;
   }
 
   body.lock .header > .container {
@@ -1072,10 +1234,6 @@ h6 {
     margin: 0;
   }
 
-  .gallery-nav__arrow:last-child {
-    top: -2px;
-  }
-
   .gallery-nav__arrow svg {
     margin-right: 81px;
   }
@@ -1220,6 +1378,24 @@ h6 {
   .footer-logo {
     margin-bottom: 50px;
   }
+
+  .popup {
+    padding-top: 144px;
+  }
+
+  .popup-wrapper__text {
+    line-height: 32.5px;
+  }
+
+  .popup-form__input {
+    margin-bottom: 20px;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .popup-form__submit {
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1273,6 +1449,10 @@ h6 {
 
   .footer-action__link {
     width: 100%;
+  }
+
+  .popup-wrapper__text {
+    font-size: 25px;
   }
 }
 

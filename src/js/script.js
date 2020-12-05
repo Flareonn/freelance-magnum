@@ -23,8 +23,29 @@ let mySwiper = new Swiper('.gallery-slider', {
 })
 $(document).ready(function () {
   $(".header-burger,.header-list__link").click(function () {
-    $(".header-burger,.header-menu").toggleClass("active");
-    $("body").toggleClass("lock");
-    $(".main-text").toggleClass("visible")
+    if($(".header-burger").hasClass("active") && $(".popup").hasClass("active"))
+    {
+      $(".popup").toggleClass("active");
+      $(".header").toggleClass("active");
+      $(".header-burger").toggleClass("active");
+      $("body").toggleClass("lock");
+    } else {
+      $(".header-burger,.header-menu").toggleClass("active");
+      $("body").toggleClass("lock");
+      $(".main-text").toggleClass("visible");
+    }
   });
+
+  $("#call-action-header,#call-action-footer,.main-text__link").click(function () {
+    $(".header-burger").toggleClass("active");
+    $("body").toggleClass("lock");
+    $(".popup").toggleClass("active");
+    $(".header").toggleClass("active");
+    let button = $(".header-action__link");
+    button.toggleClass("active")
+    $(".header").hasClass("active")
+      ? button.html("Закрыть")
+      : button.html("Обратный звонок");
+  })
 });
+

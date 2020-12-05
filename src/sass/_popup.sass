@@ -1,0 +1,55 @@
+.popup
+  padding-top: 280px
+  height: 100vh
+  position: absolute
+  top: -150%
+  left: 0
+  width: 100%
+  background-color: #E5E5E5
+  z-index: 1
+  transition: .25s all linear
+  @media ( max-width: $md3+px )
+    padding-top: 144px
+  &.active
+    display: block
+    top: 0
+    transition: .25s all linear
+  &-title
+    @extend .title
+  &-wrapper
+    &__text
+      font-weight: 500
+      line-height: 42px
+      color: #111111
+      +adaptive-font(32, 25)
+      @media ( max-width: $md3+px )
+        line-height: 32.5px
+      @media ( max-width: $md4+px )
+        font-size: 25px
+    &>*
+      margin-bottom: 50px
+  &-form
+    flex-wrap: wrap
+    display: flex
+    &__input
+      @extend .input
+      margin-right: 50px
+      @media ( max-width: $md2+px )
+        margin-bottom: 30px
+      @media ( max-width: $md3+px )
+        margin-bottom: 20px
+        width: 100%
+        margin-right: 0
+    &__submit
+      @extend .button
+      height: 60px
+      width: 250px
+      cursor: pointer
+      @media ( max-width: $md3+px )
+        width: 100%
+
+.header.active
+  svg path
+    fill: #000
+  li a
+    color: #000000

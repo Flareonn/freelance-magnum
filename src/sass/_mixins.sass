@@ -38,3 +38,19 @@ $maxWidth: 1280
   color: #fafafa
   text-align: center
   font-weight: 700
+  transition: .15s all linear
+  border: 1px solid transparent
+  &:hover
+    background-color: darken($c-active, 5%)
+    transition: .15s all linear
+  &.active
+    border: 1px solid $c-active
+    background-color: transparent
+    color: $c-active
+.input
+  padding: 22px 20px
+  background-color: rgba(26, 26, 26, .1)
+  color: #1a1a1a
+  width: 300px
+  &::placeholder
+    color: #1a1a1a
