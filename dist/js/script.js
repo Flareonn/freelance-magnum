@@ -22,7 +22,7 @@ let mySwiper = new Swiper('.gallery-slider', {
   }
 })
 $(document).ready(function () {
-  $(".header-burger,.header-list__link").click(function () {
+  $(".header-burger").click(function () {
     if($(".header-burger").hasClass("active") && $(".popup").hasClass("active"))
     {
       $(".popup").toggleClass("active");
