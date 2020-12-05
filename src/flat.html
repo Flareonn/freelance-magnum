@@ -3,18 +3,216 @@
   @@include('_head.html')
   <body>
     @@include('_header.html')
-    <main class="main">
+    <main class="main main-flat">
       <div class="container">
         <div class="main-text">
           <h1 class="main-title">
-            Умный дом для <br />
-            умных людей
+            Квартиры в <br />
+            умном доме
           </h1>
-          <h2 class="main-subtitle">Квартиры от 18000 рублей в месяц</h2>
+          <h2 class="main-subtitle">
+            Найдите и забронируйте квартиру вашей мечты
+          </h2>
           <a href="#" class="main-text__link"> Обратный звонок </a>
         </div>
       </div>
     </main>
+    <section class="settings">
+      <div class="container">
+        <form action="#" class="settings-form">
+          <fieldset class="settings-fieldset">
+            <legend>Кол-во комнат</legend>
+            <label for="rooms-1" class="settings-fieldset__label">
+              <input id="rooms-1" name="rooms" value="1" type="checkbox" />1
+            </label>
+            <label for="rooms-2" class="settings-fieldset__label">
+              <input id="rooms-2" name="rooms" value="2" type="checkbox" />2
+            </label>
+            <label for="rooms-3" class="settings-fieldset__label">
+              <input id="rooms-3" name="rooms" value="3" type="checkbox" />3
+            </label>
+            <label for="rooms-4" class="settings-fieldset__label">
+              <input id="rooms-4" name="rooms" value="4" type="checkbox" />4
+            </label>
+          </fieldset>
+          <fieldset class="settings-fieldset">
+            <legend>Площадь, м <sup>2</sup></legend>
+            <label for="area-1" class="settings-fieldset__label">
+              <input id="area-1" value="34" name="area" type="checkbox" />34
+            </label>
+            <label for="area-2" class="settings-fieldset__label">
+              <input id="area-2" value="45" name="area" type="checkbox" />45
+            </label>
+          </fieldset>
+          <fieldset class="settings-fieldset">
+            <legend>Цена, &#8381;</legend>
+            <input
+              type="text"
+              placeholder="от"
+              class="settings-fieldset__input"
+              name="price"
+            />
+            <input
+              type="text"
+              placeholder="до"
+              class="settings-fieldset__input"
+              name="price"
+            />
+          </fieldset>
+          <button class="settings-form__reset" id="flat-reset" type="reset">
+            Сбросить<svg
+              width="10"
+              height="10"
+              viewBox="0 0 10 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.20109 5.46112C1.18179 5.30029 1.17187 5.14053 1.17187 5C1.17187 2.9023 2.9023 1.17187 5 1.17187C5.97846 1.17187 6.89452 1.56639 7.56835 2.18162L7.23045 2.5254C7.15431 2.60154 7.12501 2.71286 7.15431 2.81837C7.18948 2.91794 7.27149 2.99415 7.37693 3.01758C7.43591 3.0294 9.37331 3.65371 9.24995 3.62892C9.40688 3.68118 9.63897 3.51379 9.59571 3.28323C9.58381 3.22418 9.15488 1.07201 9.17968 1.1953C9.15626 1.08986 9.08004 1.00197 8.9746 0.972671C8.87504 0.943374 8.76365 0.972671 8.68751 1.04881L8.40041 1.33003C7.51563 0.503921 6.30073 0 5 0C2.25197 0 0 2.25197 0 5V5.01167C0 5.17684 0.0075531 5.30448 0.0163269 5.40214C0.0279999 5.53153 0.123367 5.63751 0.250778 5.66307L0.85266 5.78338C1.04858 5.8226 1.22475 5.65834 1.20109 5.46112Z"
+                fill="#0B2647"
+              />
+              <path
+                d="M9.75107 4.33654L9.14743 4.21355C8.95128 4.17358 8.7739 4.33799 8.79801 4.53612C8.81891 4.7071 8.82822 4.87334 8.82822 5.00007C8.82822 7.09769 7.0978 8.82819 5.0001 8.82819C4.02163 8.82819 3.10557 8.43367 2.43174 7.81257L2.76965 7.47466C2.84579 7.39852 2.87508 7.28721 2.84579 7.18169C2.81062 7.08205 2.7286 7.00591 2.62316 6.98249C2.56419 6.97059 0.626779 6.34635 0.750147 6.37115C0.650507 6.3536 0.550867 6.38289 0.486475 6.45316C0.416132 6.51763 0.386835 6.62307 0.404383 6.71683C0.416285 6.77581 0.845285 8.90845 0.82049 8.78516C0.843835 8.89067 0.920053 8.97856 1.02549 9.00779C1.14779 9.03846 1.24987 9.00138 1.31259 8.93164L1.59388 8.65042C2.47858 9.47661 3.69349 10.0001 5.0001 10.0001C7.74813 10.0001 10.0001 7.7481 10.0001 5.00007V4.98244C10.0001 4.85259 9.99536 4.7251 9.98453 4.59838C9.97339 4.46891 9.8784 4.36256 9.75107 4.33654Z"
+                fill="#0B2647"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
+    <section class="list-flat">
+      <div class="container">
+        <h2 class="list-flat-title">Найдено 178 квартир</h2>
+        <table class="list-flat-table flat-table">
+          <thead>
+            <tr class="flat-table__element" role="row">
+              <th
+                class="flat-table__column sorting"
+                tabindex="0"
+                aria-label="Номер: активировать для сортировки столбца по возрастанию"
+              >
+                №
+              </th>
+              <th
+                class="flat-table__column sorting"
+                tabindex="1"
+                aria-label="Комнаты: активировать для сортировки столбца по возрастанию"
+              >
+                Комнаты
+              </th>
+              <th
+                class="flat-table__column sorting"
+                tabindex="2"
+                aria-label="Площадь: активировать для сортировки столбца по возрастанию"
+              >
+                Площадь
+              </th>
+              <th
+                class="flat-table__column sorting"
+                tabindex="3"
+                aria-label="Этаж: активировать для сортировки столбца по возрастанию"
+              >
+                Этаж
+              </th>
+              <th
+                class="flat-table__column sorting"
+                tabindex="4"
+                aria-label="Стоимость: активировать для сортировки столбца по возрастанию"
+              >
+                Стоимость
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="flat-table__element">
+              <td class="flat-table__column">7</td>
+              <td class="flat-table__column">1 комнатная</td>
+              <td class="flat-table__column">31.79 м <sup>2</sup></td>
+              <td class="flat-table__column">9 этаж</td>
+              <td class="flat-table__column">5 125 450 &#8381;</td>
+            </tr>
+            <tr class="flat-table__element">
+              <td class="flat-table__column">17</td>
+              <td class="flat-table__column">1 комнатная</td>
+              <td class="flat-table__column">12.79 м <sup>2</sup></td>
+              <td class="flat-table__column">10 этаж</td>
+              <td class="flat-table__column">4 392 450 &#8381;</td>
+            </tr>
+            <tr class="flat-table__element">
+              <td class="flat-table__column">127</td>
+              <td class="flat-table__column">2 комнатная</td>
+              <td class="flat-table__column">24.79 м <sup>2</sup></td>
+              <td class="flat-table__column">11 этаж</td>
+              <td class="flat-table__column">2 592 450 &#8381;</td>
+            </tr>
+            <tr class="flat-table__element">
+              <td class="flat-table__column">157</td>
+              <td class="flat-table__column">5 комнатная</td>
+              <td class="flat-table__column">34.79 м <sup>2</sup></td>
+              <td class="flat-table__column">5 этаж</td>
+              <td class="flat-table__column">5 392 450 &#8381;</td>
+            </tr>
+            <tr class="flat-table__element">
+              <td class="flat-table__column">7</td>
+              <td class="flat-table__column">1 комнатная</td>
+              <td class="flat-table__column">31.79 м <sup>2</sup></td>
+              <td class="flat-table__column">9 этаж</td>
+              <td class="flat-table__column">5 125 450 &#8381;</td>
+            </tr>
+            <tr class="flat-table__element">
+              <td class="flat-table__column">17</td>
+              <td class="flat-table__column">1 комнатная</td>
+              <td class="flat-table__column">12.79 м <sup>2</sup></td>
+              <td class="flat-table__column">10 этаж</td>
+              <td class="flat-table__column">4 392 450 &#8381;</td>
+            </tr>
+            <tr class="flat-table__element">
+              <td class="flat-table__column">127</td>
+              <td class="flat-table__column">2 комнатная</td>
+              <td class="flat-table__column">24.79 м <sup>2</sup></td>
+              <td class="flat-table__column">11 этаж</td>
+              <td class="flat-table__column">2 592 450 &#8381;</td>
+            </tr>
+            <tr class="flat-table__element">
+              <td class="flat-table__column">157</td>
+              <td class="flat-table__column">5 комнатная</td>
+              <td class="flat-table__column">34.79 м <sup>2</sup></td>
+              <td class="flat-table__column">5 этаж</td>
+              <td class="flat-table__column">5 392 450 &#8381;</td>
+            </tr>
+            <tr class="flat-table__element">
+              <td class="flat-table__column">7</td>
+              <td class="flat-table__column">1 комнатная</td>
+              <td class="flat-table__column">31.79 м <sup>2</sup></td>
+              <td class="flat-table__column">9 этаж</td>
+              <td class="flat-table__column">5 125 450 &#8381;</td>
+            </tr>
+            <tr class="flat-table__element">
+              <td class="flat-table__column">17</td>
+              <td class="flat-table__column">1 комнатная</td>
+              <td class="flat-table__column">12.79 м <sup>2</sup></td>
+              <td class="flat-table__column">10 этаж</td>
+              <td class="flat-table__column">4 392 450 &#8381;</td>
+            </tr>
+            <tr class="flat-table__element">
+              <td class="flat-table__column">127</td>
+              <td class="flat-table__column">2 комнатная</td>
+              <td class="flat-table__column">24.79 м <sup>2</sup></td>
+              <td class="flat-table__column">11 этаж</td>
+              <td class="flat-table__column">2 592 450 &#8381;</td>
+            </tr>
+            <tr class="flat-table__element">
+              <td class="flat-table__column">157</td>
+              <td class="flat-table__column">5 комнатная</td>
+              <td class="flat-table__column">34.79 м <sup>2</sup></td>
+              <td class="flat-table__column">5 этаж</td>
+              <td class="flat-table__column">5 392 450 &#8381;</td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="#" class="list-flat__link"> Показать ещё </a>
+      </div>
+    </section>
     <section class="proposal">
       <div class="container">
         <h2 class="proposal-title">заявка на бронирование</h2>

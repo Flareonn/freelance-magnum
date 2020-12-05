@@ -113,3 +113,38 @@
       @media ( max-width: $md3+px )
         width: 100%
         margin-top: 50px
+
+.list-flat
+  padding: 50px 0px 100px
+  &-title
+    @extend .title
+    color: #0b2647
+  &__link
+    @extend .button
+    display: block
+    margin: 0 auto
+    width: 200px
+    background-color: transparent
+    border: 1px solid #0B2647
+    color: #0b2647
+    &:hover
+      background-color: rgba(#0b2647, .05)
+
+.flat-table
+  width: 100%
+  border-spacing: 0px
+  border-collapse: collapse
+  margin: 50px 0
+  thead tr
+    background-color: rgba(#0B2647, .05)
+    th
+      cursor: pointer
+  &__element
+    &:nth-child(2n)
+      background-color: rgba(#0B2647, .05)
+  &__column
+    padding: 20px 0px
+    text-align: center
+    font-size: 16px
+    line-height: 16px
+    color: #111111

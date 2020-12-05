@@ -77,3 +77,25 @@ $maxWidth: 1280
   width: 300px
   &::placeholder
     color: #1a1a1a
+.form-button
+  border: 1px solid rgba(#0B2647, .15)
+  background-color: #eeeff1
+  color: #0B2647
+  text-align: center
+  width: 40px
+  height: 40px
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: 14px
+  line-height: 14px
+  cursor: pointer
+  transition: background-color .15s linear
+  &.active
+    background-color: rgba(#0B2647, .15)
+    border-color: transparent
+  &:not(.active):hover
+    transition: background-color .15s linear
+    background-color: rgba(#0B2647, .075)
+  &:not(:last-child)
+    margin-right: 10px

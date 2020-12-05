@@ -47,5 +47,60 @@ $(document).ready(function () {
       ? button.html("Закрыть")
       : button.html("Обратный звонок");
   })
+  
+  $('#rooms-1,#rooms-2,#rooms-3,#rooms-4,#area-1,#area-2').click(function(){
+    $(this).parent().toggleClass('active');
+    $(this).parent().hasClass("active")
+      ? $(this).prop('checked', true)
+      : $(this).prop('checked', false);
+  });
+  $("#flat-reset").click(function(){
+    // getRequestRoom($(".settings-form input:checked,.settings-form input.settings-fieldset__input"));
+    $(".settings-form fieldset label.active").toggleClass("active");
+    $('.settings-form fieldset input:checked').prop('checked', false);
+  });
+
+  const getRequestRoom = (array) => {
+    let request = {};
+    for(let item of Array.from(array)){
+      if($(item)[0].value) {
+        let nameOfProperty = $(item)[0].name;
+        if(!(nameOfProperty in request)) request[nameOfProperty] = []
+        request[nameOfProperty].push(+$(item)[0].value);
+      }
+    }
+    let { price } = request;
+    if(price[0] > price[1]) {
+      let temp = price[0];
+      price[0] = price[1];
+      price[1] = temp;
+    }
+    // console.log(request);
+  }
+
+  const getSort = ({ target }) => {
+    const order = (target.dataset.order = -(target.dataset.order || -1));
+    const index = [...target.parentNode.cells].indexOf(target);
+    const collator = new Intl.Collator(["en", "ru"], { numeric: true });
+    const comparator = (index, order) => (a, b) =>
+      order *
+      collator.compare(
+        a.children[index].innerHTML,
+        b.children[index].innerHTML
+      );
+
+    for (const tBody of target.closest("table").tBodies) {
+      tBody.append(...[...tBody.rows].sort(comparator(index, order)));
+      console.log(tBodies);
+    }
+
+    for (const cell of target.parentNode.cells)
+      cell.classList.toggle("sorted", cell === target);
+  };
+
+  document
+    .querySelectorAll(".flat-table thead")
+    .forEach((tableTH) => tableTH.addEventListener("click", (e) => getSort(e)));
+
 });
 
