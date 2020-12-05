@@ -1,18 +1,40 @@
 .footer
   background-color: #0b2647
   padding: 50px 0px 40px 0px
+  @media ( max-width: $md4+px )
+    padding: 30px 0px 22px 0px
   *
     color: #ffffff
   &-top
     margin-bottom: 115px
+    @media ( max-width: $md4+px )
+      margin-bottom: 50px
     .container
       display: flex
       justify-content: space-between
+      @media ( max-width: $md4+px )
+        flex-direction: column
     &__wrapper
       display: inherit
       flex-basis: 60%
       justify-content: space-between
+      @media ( max-width: $md3+px )
+        flex-direction: column
+        flex-basis: 100%
+  &-logo
+    svg
+      &:first-child
+        @media ( max-width: $md3+px )
+          display: none
+      &:last-child
+        display: none
+        @media ( max-width: $md3+px )
+          display: block
+    @media ( max-width: $md3+px )
+      margin-bottom: 50px
   &-list
+    @media ( max-width: $md4+px )
+      margin-bottom: 50px
     &__item
       margin-bottom: 12px
       &__link
@@ -22,9 +44,15 @@
         color: #FAFAFA
   &-action
     margin-left: 305px
+    @media (max-width: $md2+px)
+      margin-left: auto
+    @media ( max-width: $md4+px )
+      margin-left: 0
     &__link
       width: 210px
       @extend .button
+      @media ( max-width: $md4+px )
+        width: 100%
   &-bottom
     .container
       display: flex

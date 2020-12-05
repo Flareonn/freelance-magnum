@@ -1,48 +1,115 @@
 .flat
   margin: 150px 0
+  @media (max-width: $md3+px)
+    margin: 75px 0
   &-block
     padding: 100px 0px
     background-color: #EEEFF1
     position: relative
+    @media ( max-width: $md3+px )
+      background-color: rgb(250,250,250)
+      padding: 0
+    &::after
+      content: ''
+      position: absolute
+      width: 320px
+      height: 100%
+      display: block
+      top: 0
+      background-color: rgb(250,250,250)
+      @media ( max-width: $md3+px )
+        display: none
     &:first-child
       margin-bottom: 100px
-      .filled-card
+      &::after
         right: 0px
-      img
-        right: calc((100vw - 240px) / 10)
+      .flat-image
+        right: 120px
+        @media ( max-width: $md2+px )
+          right: 10px
+        @media ( max-width: $md3+px )
+          right: 0
+      .flat-image::before
+        @media ( max-width: $md3+px )
+          right: -20px
     &:last-child
-      .filled-card
+      &::after
         left: 0
       .flat-wrapper, .flat-title
         margin-left: 50%
-  .filled-card
-    background-color: rgb(250, 250, 250)
-    width: 320px
-    position: absolute
-    top: 0px
-    height: 100%
+        @media ( max-width: $md3+px )
+          margin-left: 0
+      .flat-image
+        left: 120px
+        @media ( max-width: $md2+px )
+          left: 10px
+        @media ( max-width: $md3+px )
+          left: 0
+      .flat-image::before
+        @media ( max-width: $md3+px )
+          left: -20px
+    @media ( max-width: $md3+px )
+      &>.container
+        padding: 50px 20px
   img
+    width: 100%
+    @media ( max-width: $md3+px )
+      position: relative
+      display: table-row-group
+      margin: 75px 0px
+  .flat-image
     position: absolute
     top: 100px
     z-index: 1
+    width: 35%
+    @media ( max-width: $md2+px )
+      width: 45%
+    @media (max-width: $md3+px)
+      top: 0
+      width: 100%
+      position: relative
+      order: -1
+      &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: calc(100% - 90px)
+        display: block
+        top: 50px
+        z-index: -1
+        background-color: #EEEFF1
   &-title
     @extend .title
     margin-bottom: 50px
   &-wrapper
     max-width: 50%
-    width: 50%
+    width: 100%
+    @media ( max-width: $md3+px )
+      max-width: 100%
+      display: flex
+      flex-direction: column
     &>*:not(:last-child)
       margin-bottom: 40px
+      @media (max-width: $md3+px)
+        margin-bottom: 0
     &__title
       font-weight: 500
-      font-size: 32px
+      +adaptive-font(32, 25)
       line-height: 42px
       color: #111111
+      @media ( max-width: $md3+px )
+        line-height: 32px
+        order: -2
     &__text
       font-size: 16px
       line-height: 22px
       color: #111111
       width: 75%
+      @media ( max-width: $md3+px )
+        width: 100%
     &__link
       @extend .button
       min-width: 250px
+      @media ( max-width: $md3+px )
+        width: 100%
+        margin-top: 50px

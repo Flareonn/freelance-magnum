@@ -21,3 +21,10 @@ let mySwiper = new Swiper('.gallery-slider', {
     prevEl: '.gallery-nav__arrow-prev',
   }
 })
+$(document).ready(function () {
+  $(".header-burger,.header-list__link").click(function () {
+    $(".header-burger,.header-menu").toggleClass("active");
+    $("body").toggleClass("lock");
+    $(".main-text").toggleClass("visible")
+  });
+});

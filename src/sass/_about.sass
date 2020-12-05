@@ -8,18 +8,25 @@
   &-parent
     display: flex
     justify-content: space-between
+    flex-wrap: wrap
   &-wrapper
     color: #111111
     &:first-child
       margin-right: 100px
       flex-basis: calc(100% / 2 - 100px)
+      @media ( max-width: $md3+px )
+        flex-basis: 100%
+        margin-right: 0
+        margin-bottom: 25px
       .about-wrapper__text
         font-weight: 500
-        font-size: 32px
+        +adaptive-font(32, 25)
         line-height: 130%
         margin-bottom: 50px
     &:last-child
       flex-basis: calc(100% / 2)
+      @media ( max-width: $md3+px )
+        flex-basis: 100%
       .about-wrapper__text
         font-weight: normal
         font-size: 16px
@@ -36,8 +43,12 @@
   &-block
     flex-basis: calc(50% - 36px)
     margin-bottom: 50px
+    @media ( max-width: $md4+px )
+      flex-basis: 100%
     &:not(:nth-child(2n))
       margin-right: 72px
+      @media ( max-width: $md4+px )
+        margin-right: 0
     &__number
       font-weight: 900
       font-size: 40px

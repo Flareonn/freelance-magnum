@@ -4,12 +4,15 @@
   <body>
     @@include('_header.html')
     <main class="main">
-      <div class="main-text">
-        <h1 class="main-title">
-          Умный дом для <br />
-          умных людей
-        </h1>
-        <h2 class="main-subtitle">Квартиры от 18000 рублей в месяц</h2>
+      <div class="container">
+        <div class="main-text">
+          <h1 class="main-title">
+            Умный дом для <br />
+            умных людей
+          </h1>
+          <h2 class="main-subtitle">Квартиры от 18000 рублей в месяц</h2>
+          <a href="#" class="main-text__link"> Обратный звонок </a>
+        </div>
       </div>
     </main>
     <section class="about" id="about">
@@ -88,6 +91,7 @@
     </section>
     <section class="gallery">
       <div class="container">
+        <h2 class="gallery-title">Галерея</h2>
         <div class="gallery-wrapper">
           <div class="gallery-text">
             <h2 class="gallery-title">Галерея</h2>
@@ -184,9 +188,11 @@
               увлажнением воздуха и многоуровневая система очистки воды.
             </p>
             <a href="#" class="flat-wrapper__link"> выбрать квартиру </a>
+            <div class="flat-image">
+              <!-- prettier-ignore -->
+              <img src="/img/flat/flat.jpg" alt="" />
+            </div>
           </div>
-          <img src="/img/flat/flat.jpg" alt="" class="flat-image" />
-          <div class="filled-card"></div>
         </div>
       </div>
       <div class="flat-block">
@@ -204,9 +210,11 @@
               увлажнением воздуха и многоуровневая система очистки воды.
             </p>
             <a href="#" class="flat-wrapper__link"> ВЫБРАТЬ ПЕНТХАУС </a>
+            <div class="flat-image">
+              <!-- prettier-ignore -->
+              <img src="/img/flat/flat-1.jpg" alt="" />
+            </div>
           </div>
-          <img src="/img/flat/flat-1.jpg" alt="" class="flat-image" />
-          <div class="filled-card"></div>
         </div>
       </div>
     </section>

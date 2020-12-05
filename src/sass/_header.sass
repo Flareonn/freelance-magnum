@@ -1,11 +1,18 @@
 .header
-  position: absolute
-  width: 100vw
-  margin: 0 120px
-  display: flex
-  justify-content: space-between
-  align-items: center
-  margin-top: 42px
+  &>.container
+    position: absolute
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 42px
+    left: 50%
+    transform: translateX(-50%)
+    @media ( max-width: $md1+px )
+      margin: 0 auto
+      padding-top: 42px
+    @media ( max-width: $md3+px )
+      padding-top: 20px
   &-menu
     display: inherit
     justify-content: inherit
@@ -17,11 +24,113 @@
       display: inherit
     &__action
       margin-left: 115px
+      @media ( max-width: $md2+px )
+        margin-left: 50px
+    &__footer
+      display: none
   &-list
     &__link
       font-size: 16px
-    &__item:not(:last-child)
-      margin-right: 32px
-  &-action
-    &__link
-      @extend .button
+    &__item
+      &:not(:last-child)
+        margin-right: 32px
+      &_mobile
+        display: none
+  &-action__link
+    @extend .button
+  &-logo__image svg
+    &:first-child
+      @media ( max-width: $md3+px )
+        display: none
+    &:last-child
+      display: none
+      @media ( max-width: $md3+px )
+        display: block
+
+.header-burger
+  display: none
+  position: relative
+  width: 30px
+  height: 20px
+  &::after, &::before, span // Отрисовка линий бургера
+    content: ''
+    height: 2px
+    width: 100%
+    background-color: #ffffff // цвет линий
+    position: absolute
+    left: 0
+    transition: all .3s ease 0s // Анимация для открытия\закрытия
+  &::before
+    top: 0
+  &::after
+    bottom: 0
+  span
+    top: 9px
+
+@media ( max-width: 768px )
+  body.lock // Запрещаем скролл при включенном меню
+    overflow: hidden
+  body.lock .header>.container
+    background-color: #E5E5E5
+  body.lock .header-logo__image svg path
+    fill: #000
+  .header // шапка сайта
+    z-index: 50
+    &-menu
+      position: fixed
+      top: -100% // изначально меню спрятано сверху, сделано это для плавной анимации
+      padding: 10px 20px
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: #E5E5E5
+      z-index: -1
+      overflow: auto
+      font-size: 1.5em
+      color: #000
+      &>ul
+        display: block
+    &-menu.active
+      top: 45px
+      height: calc(100vh - 45px)
+      z-index: 19
+      transition: all .5s ease 0s // плавная анимация
+      flex-direction: column
+      .header
+        &-list__item_mobile, &-menu__footer
+          display: block
+        &-list
+          padding-top: 100px
+          &__item
+            margin-right: 0
+            padding-bottom: 15px
+            &:nth-child(-n+3)
+              padding-bottom: 20px
+              > a
+                font-size: 25px
+                line-height: 32px
+          &__link
+            width: 100%
+            color: #000
+        &-list, &-menu__footer
+          width: 100%
+        &-list__item_mobile
+          font-size: 14px
+          line-height: 14px
+          &:first-child
+            padding-top: 50px
+        &-action
+          display: none
+    &-burger
+      display: block // отображение кнопки на тачскринах
+    &-burger.active
+      span
+        transform: scale(0) // скрываем среднюю линию
+      &::before
+        transform: rotate(45deg) // переворачиваем линию
+        top: 9px
+        background-color: #000000
+      &::after
+        transform: rotate(-45deg) // переворачиваем линию
+        top: 9px
+        background-color: #000000

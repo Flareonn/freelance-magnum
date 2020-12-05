@@ -40,25 +40,40 @@
     max-width: 750px
   @media ( max-width: $md3+px )
     max-width: none
-    padding: 0px 10px
+    padding: 0px 20px
+
+.visible
+  display: none
 
 .main
   height: 100vh
   color: #ffffff
   background-image: url('../img/main.jpg')
   background-repeat: no-repeat
+  background-size: cover
+  z-index: -12
   &-text
     position: absolute
     top: 50%
-    left: 120px
     color: #fafafa
+    z-index: 1
+    @media ( max-width: $md4+px )
+      width: calc( 100% - 40px )
     h1
       font-weight: 900
-      font-size: 60px
       margin-bottom: 30px
+      +adaptive-font(60, 30)
+      @media ( max-width: $md4+px )
+        margin-bottom: 20px
     h2
       font-weight: bold
-      font-size: 20px
+      +adaptive-font(20, 18)
+    &__link
+      @extend .button
+      display: none
+      margin-top: 40px
+      @media ( max-width: $md4+px )
+        display: block
 
 @import 'header'
 @import 'about'

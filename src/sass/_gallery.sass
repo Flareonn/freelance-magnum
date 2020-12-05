@@ -8,39 +8,72 @@
   &-title
     @extend .title
     margin-bottom: 100px
+    @media ( max-width: $md3+px )
+      margin-bottom: 50px
   &-text
     flex-basis: calc(100% - 900px)
     margin-right: 100px
     margin-bottom: 100px
+    @media ( max-width: $md1+px )
+      flex-basis: 35%
+    @media ( max-width: $md3+px )
+      flex-basis: 100%
+      margin: 0
     &__title
       font-weight: 500
-      font-size: 32px
+      +adaptive-font(32, 25)
       color: #1a1a1a
       margin-bottom: 50px
+      @media ( max-width: $md3+px )
+        margin-bottom: 20px
+        br
+          display: none
     &__description
       font-size: 16px
       line-height: 140%
       margin-bottom: 30px
     &__link
       @extend .more
+      @media ( max-width: $md3+px )
+        display: none
   &-slider
     flex-basis: 800px
+    @media ( max-width: $md1+px )
+      flex-basis: calc(65% - 100px)
+    @media ( max-width: $md3+px )
+      flex-basis: 100%
+      order: -1
+      margin-bottom: 30px
     img
       object-fit: cover
       height: 100%
+      @media ( max-width: $md3+px )
+        margin-bottom: 30px
+      @media ( max-width: $md4+px )
+        height: auto
   &-nav
     margin-top: 100px
     position: relative
+    @media ( max-width: $md3+px )
+      margin-bottom: 50px
+      display: flex
+      justify-content: space-between
     &__arrow
       position: relative
       display: inline-block
       cursor: pointer
       &:first-child
         margin-right: 86px
+        @media ( max-width: $md3+px )
+          margin: 0
       &:last-child
         transform: rotate(180deg)
+        @media ( max-width: $md3+px )
+          top: -2px
       svg
         transition: .35s all linear
+        @media ( max-width: $md3+px )
+          margin-right: 81px
         path
           fill-opacity: 1
       &:hover svg path
@@ -57,6 +90,9 @@
         background-color: #1a1a1a
         visibility: hidden
         display: block
+        @media ( max-width: $md3+px )
+          visibility: visible
+          right: 0
       &:hover
         svg
           margin-right: 81px
@@ -65,3 +101,15 @@
           transition: .35s all linear
           visibility: visible
           right: 0
+
+@media ( max-width: $md1+px )
+  .swiper-container
+    margin: 0
+
+@media ( min-width: 768.1px )
+  .gallery>.container>.gallery-title
+    display: none
+
+@media ( max-width: $md3+px )
+  .gallery .gallery-text .gallery-title
+    display: none
