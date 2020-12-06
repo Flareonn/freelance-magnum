@@ -22,29 +22,22 @@ let mySwiper = new Swiper('.gallery-slider', {
   }
 })
 $(document).ready(function () {
+  if(!$("main").hasClass("main")) {
+    $(".header,.header-burger").addClass("black");
+  }
   // Кнопка бургер на телефонах
   $(".header-burger").click(function () {
-    if($(".header-burger").hasClass("active") && $(".popup").hasClass("active"))
-    {
-      $(".popup").toggleClass("active");
-      $(".header").toggleClass("active");
-      $(".header-burger").toggleClass("active");
-      $("body").toggleClass("lock");
-    } else {
-      $(".header-burger,.header-menu").toggleClass("active");
-      $("body").toggleClass("lock");
-      $(".main-text").toggleClass("visible");
-    }
+    $(".header-burger").hasClass("active") && $(".popup").hasClass("active")
+      ? $(".popup,.header,.header-burger").toggleClass("active")
+      : $(".header-burger,.header-menu,.main-text").toggleClass("active");
+    $("body").toggleClass("lock");
   });
 
   // Вызов popup окна
   $("#call-action-header,#call-action-footer,.main-text__link").click(function () {
-    $(".header-burger").toggleClass("active");
     $("body").toggleClass("lock");
-    $(".popup").toggleClass("active");
-    $(".header").toggleClass("active");
+    $(".header,.popup,.header-burger,.header-action__link").toggleClass("active");
     let button = $(".header-action__link");
-    button.toggleClass("active")
     $(".header").hasClass("active")
       ? button.html("Закрыть")
       : button.html("Обратный звонок");

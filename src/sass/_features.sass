@@ -1,0 +1,60 @@
+.features
+  padding: 100px 0px 150px
+  background-color: #EEEFF1
+  &-title
+    @extend .title
+    padding-bottom: 50px
+  &__description
+    font-weight: 500
+    +adaptive-font(32, 25)
+    line-height: 42px
+    color: #111111
+    padding-bottom: 100px
+    @media ( max-width: $md3+px )
+      line-height: 32px
+  &-block
+    display: flex
+    flex-wrap: wrap
+    &__wrapper
+      flex-basis: 50%
+  &-list
+    &__item
+      border-bottom: 1px solid rgba(#0B2647,.2)
+      display: flex
+      align-items: center
+      &:first-child
+        border-top: 1px solid rgba(#0B2647,.2)
+    &__input
+      display: none
+      &:checked + label > svg
+        transform: rotate(45deg)
+        transition: .15s transform linear
+      &:checked + label > div
+        display: block
+        width: 500px
+        opacity: 1
+        transition: 1s all linear
+      &:checked + label > span
+        font-weight: bold
+    &__label
+      padding: 20px 0px
+      height: 100%
+      width: 100%
+      cursor: pointer
+      user-select: none
+      z-index: 2
+      position: relative
+      span, .features-list__info
+        width: inherit
+        font-size: 16px
+        line-height: 16px
+        color: #111111
+    &__info
+      margin-top: 20px
+      transition: 1s all linear
+      display: none
+    svg
+      transition: .15s transform linear
+      z-index: 1
+      position: absolute
+      right: 20px

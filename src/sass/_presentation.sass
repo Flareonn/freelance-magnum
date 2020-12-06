@@ -1,0 +1,48 @@
+.presentation
+  position: relative
+  @extend .gallery
+  &::after
+    display: block
+    content: ''
+    width: 320px
+    right: 0
+    top: 0
+    position: absolute
+    height: 100%
+    background-color: #FAFAFA
+  &-wrapper
+    @extend .gallery-wrapper
+    position: relative
+  &-text
+    @extend .gallery-text
+    padding: 81px 0px
+    &__title
+      @extend .gallery-text__title
+    &__description
+      @extend .gallery-text__description
+  &-nav
+    @extend .gallery-nav
+    position: absolute
+    bottom: -50px
+    left: 50%
+    transform: translateX(-50%)
+    &__arrow
+      @extend .gallery-nav__arrow
+      &-next
+        @extend .gallery-nav__arrow-next !optional
+      &-prev
+        @extend .gallery-nav__arrow-prev !optional
+  &-slider
+    @extend .gallery-slider
+
+#secondSlider
+  margin: 150px 0px
+  &::after
+    left: 0
+  .presentation
+    &-text
+      order: 1
+      margin-right: 0
+      margin-left: 100px
+    &-slider
+      order: -1

@@ -1,0 +1,34 @@
+.location
+  padding: 150px 0px
+  color: #111111
+  &-title
+    @extend .title
+    padding-bottom: 50px
+  &__description
+    font-weight: 500
+    +adaptive-font(32, 25)
+    line-height: 42px
+    @media (max-width: $md3+px)
+      line-height: 32px
+  &-list
+    display: flex
+    padding: 100px 0px 20px
+    &__item
+      font-size: 10px
+      line-height: 10px
+      font-weight: bold
+      letter-spacing: 0.05em
+      text-transform: uppercase
+      color: #111111
+      opacity: .5
+      transition: .25s opacity linear
+      user-select: none
+      cursor: pointer
+      &.active
+        text-decoration-line: underline
+        opacity: 1
+      &:hover
+        opacity: .75
+        transition: .25s opacity linear
+      &:not(:last-child)
+        margin-right: 25px
