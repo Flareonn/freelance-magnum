@@ -23,8 +23,7 @@
         width: 100%
     &__input
       @extend .input
-      height: fit-content
-      &:first-child
+      @media (max-width: $md2+px)
         margin-bottom: 20px
     &__submit
       @extend .button

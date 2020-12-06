@@ -1160,16 +1160,6 @@ body.lock {
   margin-right: 50px;
 }
 
-.proposal-form__input {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.proposal-form__input:first-child {
-  margin-bottom: 20px;
-}
-
 .proposal-form__submit {
   height: 60px;
   width: 250px;
@@ -1482,6 +1472,10 @@ body.lock {
 
   .flat .flat-image {
     width: 45%;
+  }
+
+  .proposal-form__input {
+    margin-bottom: 20px;
   }
 
   .proposal-form {
