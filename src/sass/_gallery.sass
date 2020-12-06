@@ -55,7 +55,7 @@
     margin-top: 100px
     position: relative
     @media ( max-width: $md3+px )
-      margin-bottom: 50px
+      margin-top: 50px
       display: flex
       justify-content: space-between
     &__arrow
@@ -68,6 +68,8 @@
           left: 0px
           width: 0px
           transition: .15s all linear
+          @media (max-width: $md4+px)
+            width: 120px
         &:hover::before
           width: 81px
           transition: .15s all linear
@@ -80,6 +82,8 @@
           right: 0
           width: 0px
           transition: .15s all linear
+          @media (max-width: $md4+px)
+            width: 120px
         &:hover::before
           width: 81px
           transition: .15s all linear
@@ -88,6 +92,9 @@
         transition: .15s all linear
         @media ( max-width: $md3+px )
           margin-right: 81px
+          path
+            @media (max-width: $md4+px)
+              fill-opacity: 1
       &:hover svg path
         fill-opacity: 1
       &::before
