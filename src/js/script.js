@@ -60,6 +60,10 @@ $(document).ready(function () {
     $('.settings-form fieldset input:checked').prop('checked', false);
   });
 
+  $(".flat-table__column.sorting").click(function () {
+    $(this).children("span").toggleClass("active");
+  })
+
   const getRequestRoom = (array) => {
     let request = {};
     for(let item of Array.from(array)){
@@ -91,7 +95,6 @@ $(document).ready(function () {
 
     for (const tBody of target.closest("table").tBodies) {
       tBody.append(...[...tBody.rows].sort(comparator(index, order)));
-      console.log(tBodies);
     }
 
     for (const cell of target.parentNode.cells)

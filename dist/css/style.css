@@ -1090,6 +1090,19 @@ body.lock {
   cursor: pointer;
 }
 
+.flat-table thead tr th span {
+  font-size: 8px;
+  color: #0B2647;
+  margin-left: 6px;
+  display: inline-block;
+}
+
+.flat-table thead tr th span.active {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .flat-table__element:nth-child(2n) {
   background-color: rgba(11, 38, 71, 0.05);
 }
@@ -1215,22 +1228,22 @@ body.lock {
   padding-top: 280px;
   height: 100vh;
   position: absolute;
-  top: -150%;
+  top: -200vh;
   left: 0;
   width: 100%;
   background-color: #E5E5E5;
   z-index: 1;
-  -webkit-transition: .25s all linear;
-  -o-transition: .25s all linear;
-  transition: .25s all linear;
+  -webkit-transition: .35s all linear;
+  -o-transition: .35s all linear;
+  transition: .35s all linear;
 }
 
 .popup.active {
   display: block;
   top: 0;
-  -webkit-transition: .25s all linear;
-  -o-transition: .25s all linear;
-  transition: .25s all linear;
+  -webkit-transition: .35s all linear;
+  -o-transition: .35s all linear;
+  transition: .35s all linear;
 }
 
 .popup-wrapper__text {
