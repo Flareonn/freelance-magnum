@@ -22,6 +22,7 @@ let mySwiper = new Swiper('.gallery-slider', {
   }
 })
 $(document).ready(function () {
+  // Кнопка бургер на телефонах
   $(".header-burger").click(function () {
     if($(".header-burger").hasClass("active") && $(".popup").hasClass("active"))
     {
@@ -36,6 +37,7 @@ $(document).ready(function () {
     }
   });
 
+  // Вызов popup окна
   $("#call-action-header,#call-action-footer,.main-text__link").click(function () {
     $(".header-burger").toggleClass("active");
     $("body").toggleClass("lock");
@@ -48,21 +50,21 @@ $(document).ready(function () {
       : button.html("Обратный звонок");
   })
   
-  $('#rooms-1,#rooms-2,#rooms-3,#rooms-4,#area-1,#area-2').click(function(){
+  // Отслеживание кликов по кол-ву комнат
+  $('.settings-fieldset__label').children("input").click(function(){
     $(this).parent().toggleClass('active');
     $(this).parent().hasClass("active")
       ? $(this).prop('checked', true)
       : $(this).prop('checked', false);
   });
+
+  // Кнопка сброса
   $("#flat-reset").click(function(){
     // getRequestRoom($(".settings-form input:checked,.settings-form input.settings-fieldset__input"));
     $(".settings-form fieldset label.active").toggleClass("active");
+    $(this).toggleClass("disabled");
     $('.settings-form fieldset input:checked').prop('checked', false);
   });
-
-  $(".flat-table__column.sorting").click(function () {
-    $(this).children("span").toggleClass("active");
-  })
 
   const getRequestRoom = (array) => {
     let request = {};
@@ -73,16 +75,22 @@ $(document).ready(function () {
         request[nameOfProperty].push(+$(item)[0].value);
       }
     }
-    let { price } = request;
+    let { price, square } = request;
     if(price[0] > price[1]) {
       let temp = price[0];
       price[0] = price[1];
       price[1] = temp;
     }
+    if(square[0] > square[1]) {
+      let temp = square[0];
+      square[0] = square[1];
+      square[1] = temp;
+    }
     // console.log(request);
   }
 
-  const getSort = ({ target }) => {
+  const getSort = ({target}) => {
+    target.classList.toggle("active");
     const order = (target.dataset.order = -(target.dataset.order || -1));
     const index = [...target.parentNode.cells].indexOf(target);
     const collator = new Intl.Collator(["en", "ru"], { numeric: true });
@@ -97,13 +105,49 @@ $(document).ready(function () {
       tBody.append(...[...tBody.rows].sort(comparator(index, order)));
     }
 
-    for (const cell of target.parentNode.cells)
-      cell.classList.toggle("sorted", cell === target);
+    // for (const cell of target.parentNode.cells)
+    //   cell.classList.toggle("sorted", cell === target);
   };
+
+  const changeReset = (value) => {
+    let resetButton = $(".settings-form__reset");
+    if(value && resetButton.hasClass("disabled")) resetButton.removeClass("disabled");
+    else if (!value) resetButton.addClass("disabled");
+  }
+
+  const onlyNumber = (target) => {
+    if(target.getAttribute("type") === "text"){
+      target.value = target.value.replace(/\D/g, "");
+    } else if (target.getAttribute("type") === "tel"){
+      target.value = target.value.replace(/[a-zA-Z ]+/g, "");
+    }
+    return target.value;
+  }
+
+  const isSelected = ({target}) => {
+    target.value = onlyNumber(target);
+    let arr = Array.from(document.querySelectorAll(".settings-fieldset input"));
+    let map = new Set(arr.map(item => {
+      if(item.checked || (item.getAttribute("type") === "text" && item.value)) return item
+    }));    
+    map.forEach(item => (!item ? map.delete(item) : null));
+    
+    changeReset(map.size > 0);
+  }
 
   document
     .querySelectorAll(".flat-table thead")
     .forEach((tableTH) => tableTH.addEventListener("click", (e) => getSort(e)));
 
+  document
+    .querySelectorAll(".settings-fieldset input")
+    .forEach((item) => {
+      item.addEventListener('click', (e) => isSelected(e))
+      item.addEventListener('keyup', (e) => isSelected(e))
+    });
+
+  document
+    .querySelectorAll(".proposal-form__input[type=\"tel\"],.popup-form__input[type=\"tel\"]")
+    .forEach(item => item.addEventListener('keyup', (e) => onlyNumber(e.target)))//({target}) => target.value = onlyNumber(target)));
 });
 
