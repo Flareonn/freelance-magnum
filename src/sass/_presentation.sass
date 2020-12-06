@@ -1,7 +1,9 @@
 .presentation
   position: relative
   @extend .gallery
-  &::after
+  @media ( max-width: $md4+px )
+    background-color: #fff
+  &::before
     display: block
     content: ''
     width: 320px
@@ -10,6 +12,8 @@
     position: absolute
     height: 100%
     background-color: #FAFAFA
+    @media ( max-width: $md4+px )
+      display: none
   &-wrapper
     @extend .gallery-wrapper
     position: relative
@@ -35,14 +39,30 @@
   &-slider
     @extend .gallery-slider
 
+@media ( max-width: $md4+px )
+  #firstSlider, #secondSlider, #thirdSlider
+    padding: 0
+    padding-bottom: 100px
+    .presentation
+      &-text
+        order: -1
+        padding: 0
+      &-nav
+        bottom: 20px
+        &__arrow-prev
+          margin-right: 50px
 #secondSlider
   margin: 150px 0px
-  &::after
+  @media ( max-width: $md4+px )
+    margin: 0
+  &::before
     left: 0
   .presentation
     &-text
       order: 1
       margin-right: 0
       margin-left: 100px
+      @media ( max-width: $md4+px )
+        margin-left: 0
     &-slider
       order: -1

@@ -1,6 +1,9 @@
 .location
   padding: 150px 0px
   color: #111111
+  @media (max-width: $md4+px)
+    background-color: #ffffff
+    padding-top: 0
   &-title
     @extend .title
     padding-bottom: 50px
@@ -13,6 +16,9 @@
   &-list
     display: flex
     padding: 100px 0px 20px
+    @media (max-width: $md4+px)
+      padding-top: 50px
+      overflow-x: scroll
     &__item
       font-size: 10px
       line-height: 10px
@@ -32,3 +38,7 @@
         transition: .25s opacity linear
       &:not(:last-child)
         margin-right: 25px
+        @media (max-width: $md4+px)
+          margin-right: 15px
+      @media (max-width: $md4+px)
+        white-space: nowrap

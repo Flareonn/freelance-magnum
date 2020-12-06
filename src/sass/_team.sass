@@ -1,5 +1,8 @@
 .team
   padding: 100px 0px
+  @media ( max-width: $md4+px )
+    padding-top: 0
+    background-color: #ffffff
   &-title
     @extend .title
   &__description
@@ -9,20 +12,36 @@
     color: #111111
     @media ( max-width: $md3+px )
       line-height: 32px
+    @media ( max-width: $md4+px )
+      br
+        display: none
   &-block
     display: flex
     flex-wrap: wrap
     &__wrapper
       flex-basis: calc(50% - 100px)
+      @media (max-width: $md2+px)
+        flex-basis: calc(50% - 50px)
+      @media ( max-width: $md3+px )
+        flex-basis: 100%
       a
         background-color: #eeeff1
         display: flex
         align-items: center
         justify-content: center
-        height: 300px
+        min-height: 300px
+        padding: 60px 64px
         margin-bottom: 50px
+        @media ( max-width: $md4+px )
+          min-height: 192px
+          margin-bottom: 25px
       &:first-child
         margin-right: 200px
+        @media (max-width: $md2+px)
+          margin-right: 100px
+        @media ( max-width: $md3+px )
+          margin-right: 0
+          margin-bottom: 30px
   &-wrapper
     &__description
       font-size: 16px

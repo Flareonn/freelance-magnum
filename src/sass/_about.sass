@@ -2,6 +2,8 @@
   padding: 100px 0px
   min-height: 100vh
   background-color: #FAFAFA
+  @media ( max-width: $md4+px )
+    background-color: #fff
   &-title
     @extend .title
     margin-bottom: 50px
@@ -17,7 +19,6 @@
       @media ( max-width: $md3+px )
         flex-basis: 100%
         margin-right: 0
-        margin-bottom: 25px
       .about-wrapper__text
         font-weight: 500
         +adaptive-font(32, 25)
@@ -33,6 +34,7 @@
         line-height: 140%
     &__link
       @extend .more
+      margin-bottom: 25px
   &-inner
     margin-top: 50px
     display: flex
@@ -64,6 +66,8 @@
 
 #about-page
   padding-bottom: 50px
+  @media ( max-width: $md4+px )
+    padding-bottom: 0
   .about
     &-title
       font-weight: 900
@@ -72,3 +76,7 @@
       color: #111111
       text-transform: none
       padding: 150px 0px
+      @media (max-width: $md4+px)
+        padding: 100px 0px 50px
+        font-size: 35px
+        line-height: 35px

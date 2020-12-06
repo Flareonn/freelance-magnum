@@ -826,6 +826,10 @@ body.lock {
   line-height: 140%;
 }
 
+.about-wrapper__link {
+  margin-bottom: 25px;
+}
+
 .about-inner {
   margin-top: 50px;
   display: -webkit-box;
@@ -1456,7 +1460,7 @@ body.lock {
   position: relative;
 }
 
-.presentation::after {
+.presentation::before {
   display: block;
   content: '';
   width: 320px;
@@ -1488,7 +1492,7 @@ body.lock {
   margin: 150px 0px;
 }
 
-#secondSlider::after {
+#secondSlider::before {
   left: 0;
 }
 
@@ -1623,10 +1627,6 @@ body.lock {
 .features-list__input:checked + label > div {
   display: block;
   width: 500px;
-  opacity: 1;
-  -webkit-transition: 1s all linear;
-  -o-transition: 1s all linear;
-  transition: 1s all linear;
 }
 
 .features-list__input:checked + label > span {
@@ -1656,9 +1656,6 @@ body.lock {
 
 .features-list__info {
   margin-top: 20px;
-  -webkit-transition: 1s all linear;
-  -o-transition: 1s all linear;
-  transition: 1s all linear;
   display: none;
 }
 
@@ -1706,7 +1703,8 @@ body.lock {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 300px;
+  min-height: 300px;
+  padding: 60px 64px;
   margin-bottom: 50px;
 }
 
@@ -1821,6 +1819,15 @@ body.lock {
 
   .popup-form__input {
     margin-bottom: 30px;
+  }
+
+  .team-block__wrapper {
+    -ms-flex-preferred-size: calc(50% - 50px);
+        flex-basis: calc(50% - 50px);
+  }
+
+  .team-block__wrapper:first-child {
+    margin-right: 100px;
   }
 }
 
@@ -1977,7 +1984,6 @@ body.lock {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-right: 0;
-    margin-bottom: 25px;
   }
 
   .about-wrapper:last-child {
@@ -2224,8 +2230,27 @@ body.lock {
     line-height: 32px;
   }
 
+  .features-block__wrapper {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  .features-block__wrapper:first-child {
+    margin-bottom: 30px;
+  }
+
   .team__description {
     line-height: 32px;
+  }
+
+  .team-block__wrapper {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  .team-block__wrapper:first-child {
+    margin-right: 0;
+    margin-bottom: 30px;
   }
 }
 
@@ -2249,6 +2274,10 @@ body.lock {
     display: block;
   }
 
+  .about {
+    background-color: #fff;
+  }
+
   .about-block {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -2256,6 +2285,16 @@ body.lock {
 
   .about-block:not(:nth-child(2n)) {
     margin-right: 0;
+  }
+
+  #about-page {
+    padding-bottom: 0;
+  }
+
+  #about-page .about-title {
+    padding: 100px 0px 50px;
+    font-size: 35px;
+    line-height: 35px;
   }
 
   .gallery-slider img,
@@ -2375,6 +2414,99 @@ body.lock {
   .settings-fieldset:first-child {
     margin-bottom: 20px;
     margin-right: 0;
+  }
+
+  .presentation {
+    background-color: #fff;
+  }
+
+  .presentation::before {
+    display: none;
+  }
+
+  #firstSlider,
+  #secondSlider,
+  #thirdSlider {
+    padding: 0;
+    padding-bottom: 100px;
+  }
+
+  #firstSlider .presentation-text,
+  #secondSlider .presentation-text,
+  #thirdSlider .presentation-text {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    padding: 0;
+  }
+
+  #firstSlider .presentation-nav,
+  #secondSlider .presentation-nav,
+  #thirdSlider .presentation-nav {
+    bottom: 20px;
+  }
+
+  #firstSlider .presentation-nav__arrow-prev,
+  #secondSlider .presentation-nav__arrow-prev,
+  #thirdSlider .presentation-nav__arrow-prev {
+    margin-right: 50px;
+  }
+
+  #secondSlider {
+    margin: 0;
+  }
+
+  #secondSlider .presentation-text {
+    margin-left: 0;
+  }
+
+  .location {
+    background-color: #ffffff;
+    padding-top: 0;
+  }
+
+  .location-list {
+    padding-top: 50px;
+    overflow-x: scroll;
+  }
+
+  .location-list__item:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  .location-list__item {
+    white-space: nowrap;
+  }
+
+  .features {
+    padding-top: 0;
+    background-color: #fff;
+  }
+
+  .features__description {
+    padding-bottom: 50px;
+  }
+
+  .features-block__wrapper:first-child {
+    display: none;
+  }
+
+  .features-list__input:checked + label > div {
+    width: 320px;
+  }
+
+  .team {
+    padding-top: 0;
+    background-color: #ffffff;
+  }
+
+  .team__description br {
+    display: none;
+  }
+
+  .team-block__wrapper a {
+    min-height: 192px;
+    margin-bottom: 25px;
   }
 }
 
