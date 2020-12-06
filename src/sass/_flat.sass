@@ -170,9 +170,9 @@
     &:nth-child(odd)
       @media ( max-width: $md4+px)
         background-color: rgba(#0B2647, .05)
-    &:last-child
-      @media ( min-width: $md4+px)
-        display: none
+  tbody tr:last-child
+    @media ( min-width: $md4+px)
+      display: none
   &__column
     padding: 20px 0px
     text-align: center

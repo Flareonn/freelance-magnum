@@ -1417,7 +1417,7 @@ body.lock {
     background-color: rgba(11, 38, 71, 0.05);
   }
 
-  .flat-table__element:last-child {
+  .flat-table tbody tr:last-child {
     display: none;
   }
 
