@@ -1,0 +1,60 @@
+.single
+  padding: 100px 0px
+  &-wrapper
+    flex-basis: 35%
+    color: #111111
+    &:last-child
+      flex-basis: 65%
+      @media (max-width: $md3+px)
+        order: -1
+      .single-wrapper__data
+        display: none
+        @media ( max-width: $md3+px )
+          display: block
+          padding-bottom: 50px
+    &__data
+      @extend .title
+      display: none
+      @media ( min-width: 768.01px )
+        display: block
+    &__title
+      font-weight: 500
+      +adaptive-font(32, 25)
+      line-height: 42px
+      margin-bottom: 50px
+      @media (max-width: $md3+px)
+        line-height: 32px
+    &__description
+      font-size: 16px
+      line-height: 22px
+      margin-bottom: 25px
+    &__image
+      margin-bottom: 50px
+  &-nav
+    @extend .gallery-nav
+    margin-top: 350px
+    &__arrow
+      @extend .gallery-nav__arrow
+      &:last-child:hover::before
+        right: 0
+      &-next
+        @extend .gallery-nav__arrow-next !optional
+      &-prev
+        @extend .gallery-nav__arrow-prev !optional
+
+#single-page
+  padding: 150px 0px 50px
+  display: flex
+  flex-wrap: wrap
+  @media ( max-width: $md3+px )
+    flex-direction: column
+    padding: 20px 20px 0px 20px
+
+.other
+  padding: 100px 0px 150px
+  background-color: #eeeff1
+  &-title
+    @extend .title
+    padding-bottom: 50px
+  &-wrapper .news-list__link
+    padding: 0
