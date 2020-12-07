@@ -1,0 +1,426 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20, 50
+        ]
+      },
+      "properties": {
+        "balloonContent": "Детские сады",
+        "clusterCaption": "Детские сады",
+        "hintContent": "Детские сады",
+        "iconCaption": "Детские сады"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/children.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10, 50
+        ]
+      },
+      "properties": {
+        "balloonContent": "Детские сады",
+        "clusterCaption": "Детские сады",
+        "hintContent": "Детские сады",
+        "iconCaption": "Детские сады"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/children.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          50, 70
+        ]
+      },
+      "properties": {
+        "balloonContent": "Детские сады",
+        "clusterCaption": "Детские сады",
+        "hintContent": "Детские сады",
+        "iconCaption": "Детские сады"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/children.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          51, 45
+        ]
+      },
+      "properties": {
+        "balloonContent": "Детские сады",
+        "clusterCaption": "Детские сады",
+        "hintContent": "Детские сады",
+        "iconCaption": "Детские сады"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/children.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14, 0
+        ]
+      },
+      "properties": {
+        "balloonContent": "Детские сады",
+        "clusterCaption": "Детские сады",
+        "hintContent": "Детские сады",
+        "iconCaption": "Детские сады"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/children.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1, 2
+        ]
+      },
+      "properties": {
+        "balloonContent": "Детские сады",
+        "clusterCaption": "Детские сады",
+        "hintContent": "Детские сады",
+        "iconCaption": "Детские сады"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/children.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          63, 25
+        ]
+      },
+      "properties": {
+        "balloonContent": "Детские сады",
+        "clusterCaption": "Детские сады",
+        "hintContent": "Детские сады",
+        "iconCaption": "Детские сады"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/children.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100, 250
+        ]
+      },
+      "properties": {
+        "balloonContent": "Развлечения",
+        "clusterCaption": "Развлечения",
+        "hintContent": "Развлечения",
+        "iconCaption": "Развлечения"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/enjoy.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -250, 56
+        ]
+      },
+      "properties": {
+        "balloonContent": "Развлечения",
+        "clusterCaption": "Развлечения",
+        "hintContent": "Развлечения",
+        "iconCaption": "Развлечения"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/enjoy.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          178, -239
+        ]
+      },
+      "properties": {
+        "balloonContent": "Развлечения",
+        "clusterCaption": "Развлечения",
+        "hintContent": "Развлечения",
+        "iconCaption": "Развлечения"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/enjoy.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123, 53
+        ]
+      },
+      "properties": {
+        "balloonContent": "Развлечения",
+        "clusterCaption": "Развлечения",
+        "hintContent": "Развлечения",
+        "iconCaption": "Развлечения"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/enjoy.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          179, -222
+        ]
+      },
+      "properties": {
+        "balloonContent": "Развлечения",
+        "clusterCaption": "Развлечения",
+        "hintContent": "Развлечения",
+        "iconCaption": "Развлечения"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/enjoy.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          214, -433
+        ]
+      },
+      "properties": {
+        "balloonContent": "Развлечения",
+        "clusterCaption": "Развлечения",
+        "hintContent": "Развлечения",
+        "iconCaption": "Развлечения"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/enjoy.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -234, -532
+        ]
+      },
+      "properties": {
+        "balloonContent": "Школы",
+        "clusterCaption": "Школы",
+        "hintContent": "Школы",
+        "iconCaption": "Школы"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/school.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120, 420
+        ]
+      },
+      "properties": {
+        "balloonContent": "Школы",
+        "clusterCaption": "Школы",
+        "hintContent": "Школы",
+        "iconCaption": "Школы"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/school.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -350, 289
+        ]
+      },
+      "properties": {
+        "balloonContent": "Школы",
+        "clusterCaption": "Школы",
+        "hintContent": "Школы",
+        "iconCaption": "Школы"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/school.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -203, 136
+        ]
+      },
+      "properties": {
+        "balloonContent": "Школы",
+        "clusterCaption": "Школы",
+        "hintContent": "Школы",
+        "iconCaption": "Школы"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/school.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5, -156
+        ]
+      },
+      "properties": {
+        "balloonContent": "Школы",
+        "clusterCaption": "Школы",
+        "hintContent": "Школы",
+        "iconCaption": "Школы"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/school.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12, 54
+        ]
+      },
+      "properties": {
+        "balloonContent": "Школы",
+        "clusterCaption": "Школы",
+        "hintContent": "Школы",
+        "iconCaption": "Школы"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/school.svg",
+        "iconImageSize": [25, 25]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          -50
+        ]
+      },
+      "properties": {
+        "balloonContent": "<b>IQ квартал<b><br />Ленина, 35",
+        "clusterCaption": "IQ квартал",
+        "hintContent": "IQ квартал",
+        "iconCaption": "IQ квартал"
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "img/map/index.svg",
+        "iconImageSize": [50, 50]
+      }
+    }
+  ]
+}

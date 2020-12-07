@@ -904,6 +904,16 @@ body.lock {
   padding: 150px 0px;
 }
 
+#map {
+  height: 668px;
+  width: 100%;
+}
+
+.ymaps-2-1-77-controls__control_toolbar,
+.ymaps-2-1-77-copyright__layout {
+  display: none !important;
+}
+
 .gallery,
 .presentation {
   padding: 100px 0;
@@ -2165,6 +2175,10 @@ body.lock {
   .about-wrapper:last-child {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+
+  #map {
+    height: 200px;
   }
 
   .gallery-title {

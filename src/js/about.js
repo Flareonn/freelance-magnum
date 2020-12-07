@@ -22,14 +22,4 @@ let thirdSlider = new Swiper('.thirdSlider', {
 
 
 $(document).ready(function () {
-  $(".location-list__item").click(function () {
-    let filterAll = $(".location-list").children()[0]
-    if(filterAll == $(this)[0]) {
-      $(".location-list").children().removeClass("active")
-      $(this).addClass("active");
-    } else {
-      filterAll.classList.remove("active");
-      $(this).toggleClass("active");
-    }
-  })
 })
