@@ -19,7 +19,3 @@ let thirdSlider = new Swiper('.thirdSlider', {
     prevEl: '.thirdSlider-prev',
   }
 })
-
-
-$(document).ready(function () {
-})

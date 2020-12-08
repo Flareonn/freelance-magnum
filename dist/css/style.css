@@ -3,6 +3,7 @@
 .gallery-title,
 .flat-title,
 .list-flat-title,
+#testedTable .flat-popup__title,
 .proposal-title,
 .popup-title,
 .location-title,
@@ -85,6 +86,7 @@
 .flat-wrapper__link,
 .list-flat__link,
 .news-list__more,
+#testedTable .flat-inner__link,
 .proposal-form__submit,
 .footer-action__link,
 .popup-form__submit {
@@ -109,6 +111,7 @@
 .flat-wrapper__link:hover,
 .list-flat__link:hover,
 .news-list__more:hover,
+#testedTable .flat-inner__link:hover,
 .proposal-form__submit:hover,
 .footer-action__link:hover,
 .popup-form__submit:hover {
@@ -124,12 +127,27 @@
 .active.flat-wrapper__link,
 .active.list-flat__link,
 .active.news-list__more,
+#testedTable .active.flat-inner__link,
 .active.proposal-form__submit,
 .active.footer-action__link,
 .active.popup-form__submit {
   border: 1px solid #FF7F5C;
   background-color: transparent;
   color: #FF7F5C;
+}
+
+.button:hover.active,
+.main-text__link:hover.active,
+.header-action__link:hover.active,
+.flat-wrapper__link:hover.active,
+.list-flat__link:hover.active,
+.news-list__more:hover.active,
+#testedTable .flat-inner__link:hover.active,
+.proposal-form__submit:hover.active,
+.footer-action__link:hover.active,
+.popup-form__submit:hover.active {
+  background-color: #FF7F5C;
+  color: #ffffff;
 }
 
 .input,
@@ -324,6 +342,7 @@ h6 {
 .gallery-title,
 .flat-title,
 .list-flat-title,
+#testedTable .flat-popup__title,
 .proposal-title,
 .popup-title,
 .location-title,
@@ -406,6 +425,7 @@ h6 {
 .flat-wrapper__link,
 .list-flat__link,
 .news-list__more,
+#testedTable .flat-inner__link,
 .proposal-form__submit,
 .footer-action__link,
 .popup-form__submit {
@@ -430,6 +450,7 @@ h6 {
 .flat-wrapper__link:hover,
 .list-flat__link:hover,
 .news-list__more:hover,
+#testedTable .flat-inner__link:hover,
 .proposal-form__submit:hover,
 .footer-action__link:hover,
 .popup-form__submit:hover {
@@ -445,12 +466,27 @@ h6 {
 .active.flat-wrapper__link,
 .active.list-flat__link,
 .active.news-list__more,
+#testedTable .active.flat-inner__link,
 .active.proposal-form__submit,
 .active.footer-action__link,
 .active.popup-form__submit {
   border: 1px solid #FF7F5C;
   background-color: transparent;
   color: #FF7F5C;
+}
+
+.button:hover.active,
+.main-text__link:hover.active,
+.header-action__link:hover.active,
+.flat-wrapper__link:hover.active,
+.list-flat__link:hover.active,
+.news-list__more:hover.active,
+#testedTable .flat-inner__link:hover.active,
+.proposal-form__submit:hover.active,
+.footer-action__link:hover.active,
+.popup-form__submit:hover.active {
+  background-color: #FF7F5C;
+  color: #ffffff;
 }
 
 .input,
@@ -734,6 +770,11 @@ h6 {
 
 .header-list__item_mobile {
   display: none;
+}
+
+.header-action__link.active:hover {
+  background-color: #FF7F5C;
+  color: #ffffff;
 }
 
 .header.black .header-logo svg path {
@@ -1205,30 +1246,201 @@ body.lock {
   margin: 50px 0;
 }
 
-.flat-table thead tr th {
+.flat-table .thead > div {
+  background-color: rgba(11, 38, 71, 0.05);
+}
+
+.flat-table .thead > div > div {
   cursor: pointer;
   font-size: 12px;
   line-height: 12px;
 }
 
-.flat-table thead tr th.active span {
+.flat-table .thead > div.active span {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.flat-table thead tr th span {
+.flat-table .thead > div span {
   font-size: 8px;
   color: #0B2647;
   margin-left: 6px;
   display: inline-block;
 }
 
+.flat-table .tbody > div {
+  cursor: pointer;
+}
+
+.flat-table .tbody > div:hover {
+  background-color: rgba(11, 38, 71, 0.75);
+}
+
+.flat-table .tbody > div:hover .flat-table__column {
+  color: #fafafa;
+}
+
+.flat-table .tbody > div:hover svg path {
+  fill: #fafafa;
+}
+
 .flat-table__column {
   padding: 20px 0px;
-  text-align: center;
   font-size: 16px;
   line-height: 16px;
+  color: #111111;
+}
+
+#testedTable .thead > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#testedTable .thead > div.active {
+  background-color: rgba(11, 38, 71, 0.05);
+}
+
+#testedTable .thead > div.active div {
+  color: #111111;
+}
+
+#testedTable .tbody > .flat-table__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#testedTable .flat-table-info {
+  display: none;
+}
+
+#testedTable .flat-table__input {
+  display: none;
+}
+
+#testedTable .flat-table__input:checked + .flat-table-info {
+  display: block;
+}
+
+#testedTable .flat-table__element_popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #FAFAFA;
+  margin-top: 50px;
+}
+
+#testedTable .flat-table__element_popup > div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#testedTable .flat-table__element_popup > div:last-child {
+  -ms-flex-preferred-size: calc(50% - 100px);
+      flex-basis: calc(50% - 100px);
+  margin: 0px 100px;
+}
+
+#testedTable .flat-table__element_popup:hover {
+  background-color: inherit;
+}
+
+#testedTable .flat-table__element_popup:hover svg path {
+  fill: #0b2647;
+}
+
+#testedTable .flat-table__element.active {
+  background-color: #0b2647;
+}
+
+#testedTable .flat-table__element.active div {
+  color: #fafafa;
+}
+
+#testedTable .flat-table__element.active svg path {
+  fill: #fafafa;
+}
+
+#testedTable .flat-table__element.active > .close {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: .25s all linear;
+  -o-transition: .25s all linear;
+  transition: .25s all linear;
+}
+
+#testedTable .flat-table__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px 20px;
+}
+
+#testedTable .flat-table__column span {
+  margin-left: 7px;
+}
+
+#testedTable .flat-table__column.close {
+  -webkit-transition: .25s all linear;
+  -o-transition: .25s all linear;
+  transition: .25s all linear;
+}
+
+#testedTable .flat-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#testedTable .flat-inner__block span {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+#testedTable .flat-inner__block p {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+#testedTable .flat-popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#testedTable .flat-popup__wrapper > * {
+  margin-bottom: 50px;
+}
+
+#testedTable .flat-popup__description {
+  font-size: 16px;
+  line-height: 22px;
   color: #111111;
 }
 
@@ -1404,6 +1616,14 @@ body.lock {
   -webkit-transition: .25s color linear;
   -o-transition: .25s color linear;
   transition: .25s color linear;
+}
+
+.flat-table__popup {
+  width: 100%;
+}
+
+.flat-table__popup td {
+  width: 100%;
 }
 
 .settings {
@@ -1899,16 +2119,8 @@ body.lock {
 }
 
 @media (min-width: 576px) {
-  .flat-table thead tr {
-    background-color: rgba(11, 38, 71, 0.05);
-  }
-
   .flat-table__element:nth-child(2n) {
     background-color: rgba(11, 38, 71, 0.05);
-  }
-
-  .flat-table tbody tr:last-child {
-    display: none;
   }
 
   .settings-fieldset__input:last-child {
@@ -2548,16 +2760,16 @@ body.lock {
     padding: 0px 20px;
   }
 
-  .flat-table thead tr {
-    background-color: #ffffff !important;
-  }
-
-  .flat-table thead tr th:nth-child(2) {
+  .flat-table .thead > div:nth-child(2) {
     padding-left: 20px;
   }
 
-  .flat-table thead tr th:last-child {
+  .flat-table .thead > div:last-child {
     padding-right: 20px;
+  }
+
+  .flat-table .thead > div {
+    background-color: #ffffff !important;
   }
 
   .flat-table__element:nth-child(odd) {
