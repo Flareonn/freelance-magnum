@@ -84,12 +84,12 @@ $(document).ready(function () {
 
   const getSortPseudoTable = ({target}) => {
     target.classList.toggle("active");
+    $(".flat-table__element_popup").remove();
+    $(".flat-table__element").removeClass("active");
     const order = (target.dataset.order = -(target.dataset.order || -1));
     let arr = Array.from($(".flat-table .thead .flat-table__element div"));
     let index = 0;
-    arr.forEach((item, idx) => {
-      if(item == target) index = idx;
-    });
+    arr.forEach((item, idx) => {if(item == target) index = idx});
     const collator = new Intl.Collator(["en", "ru"], { numeric: true });
     const comparator = (index, order) => (a, b) =>
       order *
@@ -98,36 +98,10 @@ $(document).ready(function () {
         b.children[index].innerHTML
       );
     
-    let arrCells = target.closest("#testedTable").children[1].children;
     let tBody = target.closest("#testedTable").children[1]
-    for(const item of Array.from(arrCells)){
-      tBody.append(...[...arrCells].sort(comparator(index, order)));
+    for(const item of Array.from(tBody.children)){
+      tBody.append(...[...tBody.children].sort(comparator(index, order)));
     }
-
-    // for (const tBody of target.closest("table").tBodies) {
-    //   tBody.append(...[...tBody.rows].sort(comparator(index, order)));
-    // }
-  };
-
-  const getSort = ({target}) => {
-    target.classList.toggle("active");
-    const order = (target.dataset.order = -(target.dataset.order || -1));
-    const index = [...target.parentNode.cells].indexOf(target);
-    const collator = new Intl.Collator(["en", "ru"], { numeric: true });
-    const comparator = (index, order) => (a, b) =>
-      order *
-      collator.compare(
-        a.children[index].innerHTML,
-        b.children[index].innerHTML
-      );
-
-    for (const tBody of target.closest("table").tBodies) {
-      console.log(tBody.rows)
-      tBody.append(...[...tBody.rows].sort(comparator(index, order)));
-    }
-
-    // for (const cell of target.parentNode.cells)
-    //   cell.classList.toggle("sorted", cell === target);
   };
 
   const changeReset = (value) => {
@@ -136,14 +110,7 @@ $(document).ready(function () {
     else if (!value) resetButton.addClass("disabled");
   }
 
-  const onlyNumber = (target) => {
-    if(target.getAttribute("type") === "text"){
-      target.value = target.value.replace(/\D/g, "");
-    } else if (target.getAttribute("type") === "tel"){
-      target.value = target.value.replace(/[a-zA-Z ]+/g, "");
-    }
-    return target.value;
-  }
+  const onlyNumber = (target) => target.value.replace(/\D/g, "");
 
   const isSelected = ({target}) => {
     target.value = onlyNumber(target);
@@ -198,21 +165,17 @@ $(document).ready(function () {
     if(parentOfTarget.classList.contains("active") && !$(parentOfTarget).parent()[0].classList.contains("thead")){
       parentOfTarget.after(popup);
     } else {
-      console.log(parentOfTarget.nextSibling.remove());
+      parentOfTarget.nextSibling.remove();
     }
-
   }
 
   document
-    .querySelectorAll(".flat-table__element")
-    .forEach(element => element.addEventListener("click", (e) => popupTable(e)))
+    .querySelectorAll(".tbody .flat-table__element")
+    .forEach(elementOfTable => elementOfTable.addEventListener("click", (e) => popupTable(e)))
 
-  // document
-  //   .querySelectorAll(".flat-table thead")
-  //   .forEach((tableTH) => tableTH.addEventListener("click", (e) => getSort(e)));
   document
     .querySelectorAll(".flat-table .thead")
-    .forEach((tableTH) => tableTH.addEventListener("click", (e) => getSortPseudoTable(e)));
+    .forEach((headerItem) => headerItem.addEventListener("click", (e) => getSortPseudoTable(e)));
   document
     .querySelectorAll(".settings-fieldset input")
     .forEach((item) => {
@@ -220,8 +183,7 @@ $(document).ready(function () {
       item.addEventListener('keyup', (e) => isSelected(e))
     });
 
-  document
-    .querySelectorAll(".proposal-form__input[type=\"tel\"],.popup-form__input[type=\"tel\"]")
-    .forEach(item => item.addEventListener('keyup', (e) => onlyNumber(e.target)))//({target}) => target.value = onlyNumber(target)));
+    $("input[type=\"tel\"]").inputmask({"mask": "+7 (999) 999-9999"});
+
 });
 

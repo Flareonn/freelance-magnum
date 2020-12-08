@@ -1253,7 +1253,8 @@ body.lock {
 
 .list-flat__link:hover,
 .news-list__more:hover {
-  background-color: rgba(11, 38, 71, 0.05);
+  background-color: #0b2647;
+  color: #fafafa;
 }
 
 .flat-table {
@@ -1494,6 +1495,15 @@ body.lock {
   font-size: 16px;
   line-height: 22px;
   color: #111111;
+}
+
+#testedTable .flat-popup__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .proposal {
@@ -1741,6 +1751,7 @@ body.lock {
       -ms-user-select: none;
           user-select: none;
   width: 100px;
+  cursor: text;
 }
 
 .settings-fieldset__input::-webkit-input-placeholder {
@@ -2678,6 +2689,12 @@ body.lock {
 
   #testedTable .flat-popup__wrapper > * {
     margin-bottom: 40px;
+  }
+
+  #testedTable .flat-popup__icon {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
 
   #testedTable .flat-popup__image {

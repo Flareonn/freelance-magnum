@@ -135,7 +135,8 @@
     border: 1px solid #0B2647
     color: #0b2647
     &:hover
-      background-color: rgba(#0b2647, .05)
+      background-color: #0b2647
+      color: #fafafa
 
 .flat-table
   width: 100%
@@ -315,6 +316,11 @@
         font-size: 16px
         line-height: 22px
         color: #111111
+      &__icon
+        display: flex
+        justify-content: center
+        @media (max-width: $md3+px)
+          justify-content: start
       @media (max-width: $md3+px)
         &__image
           width: 320px
