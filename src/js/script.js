@@ -159,6 +159,7 @@ $(document).ready(function () {
   const popupTable = ({target}) => {
     let popup = $(
     '<div class="flat-table__element_popup" id="flat-table-popup">' +
+      '<h2 class="flat-popup__title">Квартиры № 107</h2>' +
       '<div class="flat-popup__wrapper">' +
         '<img class="flat-popup__image" src="img/flat-info.jpg" alt="" />' +
         '<div class="flat-popup__icon">' +

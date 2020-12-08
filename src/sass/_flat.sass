@@ -204,6 +204,7 @@
   .tbody > .flat-table__element
     display: flex
     justify-content: space-between
+    align-items: center
   .flat-table
     &-info
       display: none
@@ -214,17 +215,28 @@
     &__element
       &_popup
         display: flex
-        flex-wrap: wrap
         background-color: #FAFAFA
-        margin-top: 50px
+        padding: 50px 20px 0px 20px
+        > h2
+          margin-bottom: 40px
+          @media (min-width: 768.01+px)
+            display: none
+        @media (max-width: $md3+px)
+          flex-direction: column
         >div:first-child
           display: flex
           justify-content: center
           flex-direction: column
           align-items: center
+          @media (max-width: $md3+px)
+            align-items: flex-start
         >div:last-child
           flex-basis: calc(50% - 100px)
           margin: 0px 100px
+          @media (max-width: $md1+px)
+            margin: 0px 50px
+          @media (max-width: $md3+px)
+            margin: 0
         &:hover
           background-color: inherit
           svg path
@@ -245,10 +257,18 @@
         margin-left: 7px
       &.close
         transition: .25s all linear
+      @media (max-width: $md3+px)
+        &:first-child, &:nth-child(4)
+          display: none
   .flat
     &-inner
       display: flex
       justify-content: space-between
+      @media (max-width: $md3+px)
+        flex-wrap: wrap
+      &:last-child
+        @media (max-width: $md3+px)
+          flex-direction: column
       &__block
         span
           font-weight: bold
@@ -257,15 +277,32 @@
         p
           font-size: 14px
           line-height: 14px
+        @media (max-width: $md3+px)
+          flex-basis: 50%
+          margin-bottom: 20px
       &__link
         @extend .button
+        &:first-child
+          margin-right: 30px
+          @media (max-width: $md3+px)
+            margin-right: 0
+            margin-bottom: 20px
     &-popup
       display: flex
       &__title
         @extend .title
+      &__wrapper > h2
+        display: inline-block
+        @media (max-width: $md3+px)
+          display: none
       &__wrapper > *
         margin-bottom: 50px
+        @media (max-width: $md3+px)
+          margin-bottom: 40px
       &__description
         font-size: 16px
         line-height: 22px
         color: #111111
+      @media (max-width: $md3+px)
+        &__image
+          width: 320px
