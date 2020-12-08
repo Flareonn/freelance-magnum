@@ -201,6 +201,13 @@
       background-color: rgba(#0b2647, .05)
       div
         color: #111111
+  .thead > div > .flat-table__column
+    font-weight: bold
+    font-size: 16px
+    line-height: 16px
+    color: #0B2647
+    &:nth-last-child(2)
+      margin-right: 20px
   .tbody > .flat-table__element
     display: flex
     justify-content: space-between
@@ -247,15 +254,20 @@
           color: #fafafa
         svg path
           fill: #fafafa
-      &.active > .close
+      &.active > .close > svg
         transform: rotate(45deg)
         transition: .25s all linear
     &__column
       display: flex
-      margin: 0px 20px
+      flex-basis: calc(20% - 8px)
+      &:first-child
+        padding-left: 20px
+      &:last-child
+        flex-basis: 40px
       span
         margin-left: 7px
-      &.close
+      &.close > svg
+        margin-right: 20px
         transition: .25s all linear
       @media (max-width: $md3+px)
         &:first-child, &:nth-child(4)

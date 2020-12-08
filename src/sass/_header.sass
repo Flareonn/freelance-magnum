@@ -43,9 +43,12 @@
         display: none
   &-action__link
     @extend .button
-    &.active:hover
-      background-color: $c-active
-      color: #ffffff
+    width: 200px
+    white-space: nowrap
+    &.active
+      &:hover
+        background-color: $c-active
+        color: #ffffff
   &-logo__image
     @extend .logo
   &.black
