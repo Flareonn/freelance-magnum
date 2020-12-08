@@ -76,6 +76,75 @@
         display: block
   &-flat
     background-image: url('../img/main-flat.jpg')
+
+#house-page .main-subtitle
+  line-height: 24px
+
+.house
+  padding: 100px 0px 150px
+  &>.container
+    display: flex
+    flex-wrap: wrap
+  &-wrapper
+    flex-basis: calc(50% - 50px)
+    @media ( max-width: $md3+px )
+      flex-basis: 100%
+    &__description
+      color: #111111
+    &__images
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      @media ( max-width: $md4+px )
+        align-items: flex-start
+      >picture
+        margin-bottom: 50px
+      img, picture
+        width: 100%
+    &:first-child
+      margin-right: 100px
+      @media ( max-width: $md3+px )
+        margin-right: 0
+      .house-wrapper__description
+        font-weight: 500
+        +adaptive-font(32, 25)
+        line-height: 42px
+        @media ( max-width: $md3+px )
+          margin-bottom: 35px
+    &:last-child
+      .house-wrapper__description
+        font-size: 16px
+        line-height: 22px
+        margin-bottom: 20px
+  &-inner
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 30px 0px 50px
+    @media ( max-width: $md2+px )
+      padding: 30px 0px
+  &-block
+    display: flex
+    flex-direction: column
+    @media ( max-width: $md2+px )
+      flex-basis: 50%
+      margin-bottom: 20px
+    @media ( max-width: $md3+px )
+      flex-basis: 25%
+      align-items: center
+    @media ( max-width: $md4+px )
+      flex-basis: 50%
+      align-items: start
+    &__number
+      font-weight: bold
+      font-size: 40px
+      line-height: 40px
+      margin-bottom: 10px
+    &__text
+      font-size: 14px
+      line-height: 14px
+
 @import 'header'
 @import 'about'
 @import 'gallery'
