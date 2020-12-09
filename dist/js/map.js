@@ -98,6 +98,7 @@ function init() {
         
         let yaMapListBoxItems = ymaps.util.extend({}, listBoxControl.state.get('filters'))
         let nameOfFilter = e.target.innerText.substr(0, 1).toUpperCase() + e.target.innerText.substr(1).toLowerCase()
+        
         if(nameOfFilter == "Все объекты") {
             let temp = Object.assign({}, yaMapListBoxItems)
             temp[Symbol.iterator] = function* () {
@@ -118,14 +119,13 @@ function init() {
     };
     var filterMonitor = new ymaps.Monitor(listBoxControl.state);
     filterMonitor.add('filters', function (filters) {
-        // Применим фильтр.
         objectManager.setFilter(getFilterFunction(filters));
     });
 
     function getFilterFunction(categories) {
         return function (obj) {
-            var content = obj.properties.balloonContent;
-            return obj.id != 19 ? categories[content] : true
+            var content = obj.properties.hintContent;
+            return categories[content];
         }
     }
     var placemark = new ymaps.Placemark([0, -50], {
