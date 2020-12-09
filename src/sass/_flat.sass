@@ -137,9 +137,10 @@
     border: 1px solid #0B2647
     color: #0b2647
     cursor: pointer
-    &:hover
-      background-color: #0b2647
-      color: #fafafa
+    @media (min-width: $md3+px)
+      &:hover
+        background-color: #0b2647
+        color: #fafafa
     @media ( max-width: $md3+px )
       width: calc(100% - 40px)
 

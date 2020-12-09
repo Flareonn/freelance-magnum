@@ -181,8 +181,10 @@ $(document).ready(function () {
       item.addEventListener('click', (e) => isSelected(e))
       item.addEventListener('keyup', (e) => isSelected(e))
     })
-  
+    
   $(".more").click(function() {
+    $(".flat-table__element_popup").remove();
+    $(".flat-table__element").removeClass("active");
     let elements = [];
     if($(this).hasClass("list-flat__link")){
       elements = Array.from($(".tbody").children());

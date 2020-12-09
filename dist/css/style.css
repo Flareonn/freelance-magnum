@@ -105,22 +105,6 @@
   border: 1px solid transparent;
 }
 
-.button:hover,
-.main-text__link:hover,
-.header-action__link:hover,
-.flat-wrapper__link:hover,
-.list-flat__link:hover,
-.news-list__more:hover,
-#testedTable .flat-inner__link:hover,
-.proposal-form__submit:hover,
-.footer-action__link:hover,
-.popup-form__submit:hover {
-  background-color: #ff6b43;
-  -webkit-transition: .15s all linear;
-  -o-transition: .15s all linear;
-  transition: .15s all linear;
-}
-
 .button.active,
 .active.main-text__link,
 .active.header-action__link,
@@ -442,22 +426,6 @@ h6 {
   -o-transition: .15s all linear;
   transition: .15s all linear;
   border: 1px solid transparent;
-}
-
-.button:hover,
-.main-text__link:hover,
-.header-action__link:hover,
-.flat-wrapper__link:hover,
-.list-flat__link:hover,
-.news-list__more:hover,
-#testedTable .flat-inner__link:hover,
-.proposal-form__submit:hover,
-.footer-action__link:hover,
-.popup-form__submit:hover {
-  background-color: #ff6b43;
-  -webkit-transition: .15s all linear;
-  -o-transition: .15s all linear;
-  transition: .15s all linear;
 }
 
 .button.active,
@@ -801,6 +769,10 @@ h6 {
 .house-block__text {
   font-size: 14px;
   line-height: 14px;
+}
+
+input[type=submit] {
+  -webkit-appearance: none;
 }
 
 .header > .container {
@@ -1375,12 +1347,6 @@ body.lock {
   border: 1px solid #0B2647;
   color: #0b2647;
   cursor: pointer;
-}
-
-.list-flat__link:hover,
-.news-list__more:hover {
-  background-color: #0b2647;
-  color: #fafafa;
 }
 
 .flat-table {
@@ -2314,6 +2280,46 @@ body.lock {
 
   .settings-fieldset__input:last-child {
     margin-left: 7px;
+  }
+}
+
+@media (min-width: 768px) {
+  .button:hover,
+  .main-text__link:hover,
+  .header-action__link:hover,
+  .flat-wrapper__link:hover,
+  .list-flat__link:hover,
+  .news-list__more:hover,
+  #testedTable .flat-inner__link:hover,
+  .proposal-form__submit:hover,
+  .footer-action__link:hover,
+  .popup-form__submit:hover {
+    background-color: #ff6b43;
+    -webkit-transition: .15s all linear;
+    -o-transition: .15s all linear;
+    transition: .15s all linear;
+  }
+
+  .button:hover,
+  .main-text__link:hover,
+  .header-action__link:hover,
+  .flat-wrapper__link:hover,
+  .list-flat__link:hover,
+  .news-list__more:hover,
+  #testedTable .flat-inner__link:hover,
+  .proposal-form__submit:hover,
+  .footer-action__link:hover,
+  .popup-form__submit:hover {
+    background-color: #ff6b43;
+    -webkit-transition: .15s all linear;
+    -o-transition: .15s all linear;
+    transition: .15s all linear;
+  }
+
+  .list-flat__link:hover,
+  .news-list__more:hover {
+    background-color: #0b2647;
+    color: #fafafa;
   }
 }
 

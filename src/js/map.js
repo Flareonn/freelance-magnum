@@ -124,7 +124,7 @@ function init() {
 
     function getFilterFunction(categories) {
         return function (obj) {
-            var content = obj.properties.hintContent;
+            var content = obj.properties.balloonContent;
             return categories[content];
         }
     }
@@ -147,7 +147,7 @@ function init() {
     myMap.geoObjects.options.set('balloonPanelMaxMapArea', 0)
     placemark.balloon.open();
     $.ajax({
-        url: "https://api.jsonbin.io/b/5fce251c516f9d1270293446/5"
+        url: "https://api.jsonbin.io/b/5fce251c516f9d1270293446/4"
     }).done(function (data) {
         objectManager.add(data);
     });

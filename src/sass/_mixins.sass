@@ -63,9 +63,10 @@ $maxWidth: 1280
   font-weight: 700
   transition: .15s all linear
   border: 1px solid transparent
-  &:hover
-    background-color: darken($c-active, 5%)
-    transition: .15s all linear
+  @media (min-width: $md3+px)
+    &:hover
+      background-color: darken($c-active, 5%)
+      transition: .15s all linear
   &.active
     border: 1px solid $c-active
     background-color: transparent
