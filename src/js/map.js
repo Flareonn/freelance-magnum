@@ -11,30 +11,17 @@ function init() {
 
     var Layer = function() {
         var layer = new ymaps.Layer(TILES_PATH + '/%z/tile-%x-%y.jpg', {
-            // Если есть необходимость показать собственное изображение в местах неподгрузившихся тайлов,
-            // раскомментируйте эту строчку и укажите ссылку на изображение.
-            // notFoundTile: 'img/map/tile.jpg'
         });
-        // Указываем доступный диапазон масштабов для данного слоя.
         layer.getZoomRange = function () {
             return ymaps.vow.resolve([0, 4]);
         };
-        // Добавляем свои копирайты.
         layer.getCopyrights = function () {
             return ymaps.vow.resolve('©');
         };
         return layer;
     };
-    // Добавляем в хранилище слоев свой конструктор.
     ymaps.layer.storage.add(LAYER_NAME, Layer);
-
-    /**
-     * Создадим новый тип карты.
-     * MAP_TYPE_NAME - имя нового типа.
-     * LAYER_NAME - ключ в хранилище слоев или функция конструктор.
-     */
     var mapType = new ymaps.MapType(MAP_TYPE_NAME, [LAYER_NAME]);
-    // Сохраняем тип в хранилище типов.
     ymaps.mapType.storage.add(MAP_TYPE_NAME, mapType);
     var worldSize = Math.pow(2, MAX_ZOOM) * 256
     var myMap = new ymaps.Map('map', {
@@ -141,10 +128,26 @@ function init() {
             return obj.id != 19 ? categories[content] : true
         }
     }
-
+    var placemark = new ymaps.Placemark([0, -50], {
+        hintContent: "Наш офис",
+        balloonContentHeader: '<b class="my-company-baloon__header">IQ квартал</b>',
+        balloonContentBody: '<span class=\"my-company-baloon__body\">Ленина, 35</span>'
+    }, {
+        iconLayout: "default#image",
+        iconImageHref: "img/map/index.svg",
+        iconImageSize: [50, 50],
+        balloonOffset: [80, -30],
+        balloonCloseButton: false,
+        hideIconOnBalloonOpen: false,
+        balloonMinWidth: 300,
+        balloonMinHeight: 50,
+        balloonShadowOffset: [0, 2.43346, 2.43346]
+    })
+    myMap.geoObjects.add(placemark);
+    myMap.geoObjects.options.set('balloonPanelMaxMapArea', 0)
+    placemark.balloon.open();
     $.ajax({
-        // url: "https://api.jsonbin.io/b/5fcd2a012946d2126ffefa0c/1"
-        url: "https://api.jsonbin.io/b/5fce251c516f9d1270293446/3"
+        url: "https://api.jsonbin.io/b/5fce251c516f9d1270293446/5"
     }).done(function (data) {
         objectManager.add(data);
     });
