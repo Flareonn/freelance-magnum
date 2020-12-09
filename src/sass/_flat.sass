@@ -21,6 +21,8 @@
         display: none
     &:first-child
       margin-bottom: 100px
+      @media ( max-width: $md3+px )
+        margin-bottom: 0px
       &::after
         right: 0px
       .flat-image
@@ -134,9 +136,12 @@
     background-color: transparent
     border: 1px solid #0B2647
     color: #0b2647
+    cursor: pointer
     &:hover
       background-color: #0b2647
       color: #fafafa
+    @media ( max-width: $md3+px )
+      width: calc(100% - 40px)
 
 .flat-table
   width: 100%
@@ -207,6 +212,13 @@
     font-size: 16px
     line-height: 16px
     color: #0B2647
+    &:nth-last-child(2)
+      display: none
+      @media (max-width: $md3+px)
+        display: block
+    @media ( max-width: $md3+px )
+      &:nth-last-child(3)
+        display: none
   .tbody > .flat-table__element
     display: flex
     justify-content: space-between
@@ -259,10 +271,14 @@
     &__column
       display: flex
       flex-basis: calc(20% - 8px)
+      @media ( max-width: $md3+px )
+        flex-basis: calc((100% / 3) - 8px)
       &:first-child
         padding-left: 20px
       &:last-child
         flex-basis: 40px
+        @media ( max-width: $md3+px )
+          display: none
       span
         margin-left: 7px
       &.close > svg

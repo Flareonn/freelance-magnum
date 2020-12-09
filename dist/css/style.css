@@ -1068,7 +1068,8 @@ body.lock {
 }
 
 .ymaps-2-1-77-controls__control_toolbar,
-.ymaps-2-1-77-copyright__layout {
+.ymaps-2-1-77-copyright__layout,
+.ymaps-2-1-77-balloon__tail {
   display: none !important;
 }
 
@@ -1373,6 +1374,7 @@ body.lock {
   background-color: transparent;
   border: 1px solid #0B2647;
   color: #0b2647;
+  cursor: pointer;
 }
 
 .list-flat__link:hover,
@@ -1456,6 +1458,10 @@ body.lock {
   font-size: 16px;
   line-height: 16px;
   color: #0B2647;
+}
+
+#testedTable .thead > div > .flat-table__column:nth-last-child(2) {
+  display: none;
 }
 
 #testedTable .tbody > .flat-table__element {
@@ -2611,8 +2617,43 @@ body.lock {
         flex-basis: 100%;
   }
 
+  .about-wrapper__link {
+    margin-bottom: 50px;
+  }
+
   #map {
     height: 200px;
+  }
+
+  .ymaps-2-1-77-balloon__content {
+    width: 101px;
+    height: 30px !important;
+  }
+
+  .ymaps-2-1-77-balloon__content > ymaps {
+    height: 100% !important;
+  }
+
+  .ymaps-2-1-77-balloon__content > ymaps > ymaps {
+    height: 30px;
+    width: 101px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .my-company-baloon__header {
+    font-size: 8.51711px;
+    line-height: 9px;
+  }
+
+  .my-company-baloon__body {
+    font-size: 6.08365px;
+    line-height: 6px;
   }
 
   .gallery-title {
@@ -2707,6 +2748,10 @@ body.lock {
     display: none;
   }
 
+  .flat-block:first-child {
+    margin-bottom: 0px;
+  }
+
   .flat-block:first-child .flat-image {
     right: 0;
   }
@@ -2789,6 +2834,19 @@ body.lock {
     margin-top: 50px;
   }
 
+  .list-flat__link,
+  .news-list__more {
+    width: calc(100% - 40px);
+  }
+
+  #testedTable .thead > div > .flat-table__column:nth-last-child(2) {
+    display: block;
+  }
+
+  #testedTable .thead > div > .flat-table__column:nth-last-child(3) {
+    display: none;
+  }
+
   #testedTable .flat-table__element_popup {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2804,6 +2862,15 @@ body.lock {
 
   #testedTable .flat-table__element_popup > div:last-child {
     margin: 0;
+  }
+
+  #testedTable .flat-table__column {
+    -ms-flex-preferred-size: calc((100% / 3) - 8px);
+        flex-basis: calc((100% / 3) - 8px);
+  }
+
+  #testedTable .flat-table__column:last-child {
+    display: none;
   }
 
   #testedTable .flat-table__column:first-child,
